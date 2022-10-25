@@ -1,0 +1,4405 @@
+Building configuration...
+Current configuration with default configurations exposed : 148482 bytes
+!
+! Last configuration change at 08:15:31 UTC Tue Oct 25 2022 by dnacadmin
+! NVRAM config last updated at 08:29:42 UTC Tue Oct 25 2022 by NETCONF
+!
+no issu config-sync policy lbl prc
+no issu config-sync policy bulk prc
+version 17.6
+downward-compatible-config 17.6
+no service log backtrace
+no service config
+no service exec-callback
+no service nagle
+service slave-log
+no service slave-coredump
+no service pad to-xot
+no service pad from-xot
+no service pad cmns
+no service pad
+no service telnet-zeroidle
+no service tcp-keepalives-in
+no service tcp-keepalives-out
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+no service exec-wait
+no service linenumber
+no service internal
+no service log-hidden
+no service scripting
+no service compress-config
+service prompt config
+no service old-slip-prompts
+no service hide-telnet-addresses
+no service pt-vty-logging
+no service disable-ip-fast-frag
+no service sequence-numbers
+service counters max age 0
+service dhcp
+service call-home
+service password-recovery
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform urpf loose counter ipv4 supress asymmetric_only
+platform urpf loose counter ipv6 supress asymmetric_only
+platform punt-policer ipv4-options 874
+platform punt-policer ipv4-options 655 high
+platform punt-policer unknown-encap 8738
+platform punt-policer unknown-encap 2185 high
+platform punt-policer ppp-control 437
+platform punt-policer ppp-control 1000 high
+platform punt-policer clns-control 8738
+platform punt-policer clns-control 2185 high
+platform punt-policer hdlc-keepalive 437
+platform punt-policer hdlc-keepalive 1000 high
+platform punt-policer arp 437
+platform punt-policer arp 1000 high
+platform punt-policer reserve-arp 437
+platform punt-policer reserve-arp 1000 high
+platform punt-policer lmi-control 437
+platform punt-policer lmi-control 1000 high
+platform punt-policer incomplete-adj 437
+platform punt-policer incomplete-adj 1000 high
+platform punt-policer for-us-data 8738
+platform punt-policer for-us-data 874 high
+platform punt-policer mcast-dcs 437
+platform punt-policer mcast-dcs 1000 high
+platform punt-policer mcast-ipv4-options 437
+platform punt-policer mcast-ipv4-options 1000 high
+platform punt-policer mpls-ttl 1118
+platform punt-policer mpls-ttl 437 high
+platform punt-policer mpls-res-label 1118
+platform punt-policer mpls-res-label 437 high
+platform punt-policer ipv6-hopopts 437
+platform punt-policer ipv6-hopopts 1000 high
+platform punt-policer mcast-send-internal-copy 437
+platform punt-policer mcast-send-internal-copy 1000 high
+platform punt-policer mcast-igmp-nonroutable 437
+platform punt-policer mcast-igmp-nonroutable 1000 high
+platform punt-policer glean-adj 437
+platform punt-policer glean-adj 874 high
+platform punt-policer mcast-pim-signaling 437
+platform punt-policer mcast-pim-signaling 1000 high
+platform punt-policer ess-control 2185
+platform punt-policer ess-control 8738 high
+platform punt-policer icmp-cfg-punt 437
+platform punt-policer icmp-cfg-punt 1000 high
+platform punt-policer for-us-internal-data 4369
+platform punt-policer for-us-internal-data 1000 high
+platform punt-policer sbc-rtp 437
+platform punt-policer sbc-rtp 1000 high
+platform punt-policer pw-vccv 437
+platform punt-policer pw-vccv 1000 high
+platform punt-policer slow-protocol 437
+platform punt-policer slow-protocol 1000 high
+platform punt-policer l2tp-session 229
+platform punt-policer l2tp-session 1000 high
+platform punt-policer bfd-control 437
+platform punt-policer bfd-control 874 high
+platform punt-policer dmvpn-redir-pkt 437
+platform punt-policer dmvpn-redir-pkt 1000 high
+platform punt-policer pfr-mp-cache 437
+platform punt-policer pfr-mp-cache 1000 high
+platform punt-policer pfr-tt-cache 437
+platform punt-policer pfr-tt-cache 1000 high
+platform punt-policer pfr-tt-appl-cache 437
+platform punt-policer pfr-tt-appl-cache 1000 high
+platform punt-policer for-us-ctrl 4369
+platform punt-policer for-us-ctrl 4371 high
+platform punt-policer for-us-internal-ctrl 437
+platform punt-policer for-us-internal-ctrl 437 high
+platform punt-policer layer2-bd-data 437
+platform punt-policer layer2-bd-data 1000 high
+platform punt-policer subnet-bcast 437
+platform punt-policer subnet-bcast 1000 high
+platform punt-policer ecfm-pkt 437
+platform punt-policer ecfm-pkt 1000 high
+platform punt-policer ecfm-notify 437
+platform punt-policer ecfm-notify 1000 high
+platform punt-policer lisp-lsb-notify 437
+platform punt-policer lisp-lsb-notify 1000 high
+platform punt-policer service-engine 100000000
+platform punt-policer service-engine 1000 high
+platform punt-policer layer2-bd-ctrl 437
+platform punt-policer layer2-bd-ctrl 1000 high
+platform punt-policer layer2-bd-msg 437
+platform punt-policer layer2-bd-msg 1000 high
+platform punt-policer mfr-lip-control 437
+platform punt-policer mfr-lip-control 1000 high
+platform punt-policer otv-cntrl-pkt 437
+platform punt-policer otv-cntrl-pkt 1000 high
+platform punt-policer otv-arp-pkt 437
+platform punt-policer otv-arp-pkt 1000 high
+platform punt-policer l2-bpdu 437
+platform punt-policer l2-bpdu 1000 high
+platform punt-policer acl-log 437
+platform punt-policer acl-log 1000 high
+platform punt-policer epc 8738
+platform punt-policer epc 1000 high
+platform punt-policer lisp-dynamic-eid 437
+platform punt-policer lisp-dynamic-eid 1000 high
+platform punt-policer l2cp 437
+platform punt-policer l2cp 1000 high
+platform punt-policer dhcp-snoop 437
+platform punt-policer dhcp-snoop 1000 high
+platform punt-policer mma-record 2400
+platform punt-policer mma-record 1000 high
+platform punt-policer dmvpnv6-redir-req 437
+platform punt-policer dmvpnv6-redir-req 1000 high
+platform punt-policer ecfm-from-core 437
+platform punt-policer ecfm-from-core 1000 high
+platform punt-policer ecfm-punt-fwd 437
+platform punt-policer ecfm-punt-fwd 1000 high
+platform punt-policer fhs-source-guard 437
+platform punt-policer fhs-source-guard 1000 high
+platform punt-policer fhs-data-glean 437
+platform punt-policer fhs-data-glean 1000 high
+platform punt-policer sbc-dsp 437
+platform punt-policer sbc-dsp 1000 high
+platform punt-policer cent-smp 437
+platform punt-policer cent-smp 1000 high
+platform punt-policer automatic-hw 437
+platform punt-policer automatic-hw 1000 high
+platform punt-policer lfts-transport 1700
+platform punt-policer lfts-transport 45000 high
+platform punt-policer vlan-autosense 437
+platform punt-policer vlan-autosense 1000 high
+platform punt-policer mka 437
+platform punt-policer mka 1000 high
+platform punt-policer snooping 437
+platform punt-policer snooping 1000 high
+platform punt-policer proto-snoop 437
+platform punt-policer proto-snoop 1000 high
+platform punt-policer qos-cac 500
+platform punt-policer qos-cac 1000 high
+platform punt-policer active-identity 437
+platform punt-policer active-identity 1000 high
+platform punt-policer bgp-tun-pkt 437
+platform punt-policer bgp-tun-pkt 1000 high
+platform punt-policer lisp-gsmr-ena 437
+platform punt-policer lisp-gsmr-ena 1000 high
+platform punt-policer sbc-rtp-fwd 437
+platform punt-policer sbc-rtp-fwd 1000 high
+platform punt-policer path-manager 437
+platform punt-policer path-manager 1000 high
+platform punt-policer path-manager-ttl 437
+platform punt-policer path-manager-ttl 1000 high
+platform punt-policer wls_dot11_pkt 12000
+platform punt-policer wls_dot11_pkt 2400 high
+platform punt-policer wls_capwap_pkt 437
+platform punt-policer wls_capwap_pkt 45000 high
+platform punt-policer wls_mobility_pkt 437
+platform punt-policer wls_mobility_pkt 45000 high
+platform punt-policer wls_sisf_pkt 437
+platform punt-policer wls_sisf_pkt 14400 high
+platform punt-policer efp-dot1x 437
+platform punt-policer efp-dot1x 1000 high
+platform punt-policer dmvpn-gal-check 437
+platform punt-policer dmvpn-gal-check 1000 high
+platform punt-policer mcast-udlr 437
+platform punt-policer mcast-udlr 1000 high
+platform console virtual
+!
+hostname C9800-WLC
+!
+boot-start-marker
+boot system bootflash:/C9800-CL-universalk9.17.06.02.SPA.bin
+boot system bootflash:C9800-CL-universalk9.17.05.01.SPA.bin
+boot config 
+boot-end-marker
+!
+shell processing
+!
+no logging discriminator
+logging exception 4096
+no logging count
+no logging message-counter log
+no logging message-counter debug
+logging message-counter syslog
+no logging snmp-authfail
+no logging userinfo
+logging buginf
+logging queue-limit 1024
+logging queue-limit esm 0
+logging queue-limit trap 1024
+logging buffered 131072 debugging
+logging reload message-limit 1000 notifications
+no logging persistent
+logging rate-limit console 40 except errors
+logging console guaranteed
+logging console debugging
+logging monitor debugging
+logging cns-events informational
+logging on
+enable secret 8 $8$EAMzdxG96wUHOk$p.IvTn3/It5miiI.dnKkpyB.nUoZ8PQ1LyFHRztaU.Y
+!
+spd extended-headroom 10
+spd headroom 1000
+spd enable
+ipc holdq threshold upper 20
+ipc holdq threshold lower 1
+ipc header-cache permanent 1000 100
+ipc buffers max-free 1440
+ipc buffers min-free 144
+ipc buffers permanent 432
+aaa new-model
+!
+!
+aaa group server radius dnac-network-radius-group
+ server name dnac-radius_198.18.133.27
+ cache expiry 24 enforce hours
+ ip radius source-interface GigabitEthernet1
+!
+aaa authentication attempts login 3
+aaa authentication login default group dnac-network-radius-group local
+aaa authentication login VTY_authen group dnac-network-radius-group local
+aaa authorization exec default group dnac-network-radius-group local if-authenticated 
+aaa authorization exec VTY_author group dnac-network-radius-group local if-authenticated 
+aaa accounting jitter maximum 300
+aaa accounting update newinfo periodic 2880
+aaa accounting exec default start-stop group dnac-network-radius-group
+!
+!
+aaa login display last-success
+aaa login display last-failure
+aaa login display number-failures
+aaa login success-track-conf-time 0
+ port 1645
+!
+!
+!
+aaa server radius dynamic-author
+ client 198.18.133.27 server-key 7 096F1F1A1A0A4640585851
+ port 1700
+ dtls port 2083
+!
+aaa session-id common
+aaa memory threshold authentication reject 3
+aaa memory threshold accounting disable 2
+ethernet cfm slm max 8000
+ethernet cfm slm timeout 5
+ethernet cfm alarm notification mac-remote-error-xcon
+ethernet cfm alarm delay 2500
+ethernet cfm alarm packet 0
+ethernet cfm alarm reset 10000
+ethernet cfm logging alarm ieee
+ethernet cfm logging alarm cisco
+ethernet cfm logging ais
+ethernet cfm logging lck
+ethernet cfm ais link-status global
+ no disable
+ period 60
+ppp hold-queue 32768
+ppp packet throttle 20 1 30
+process cpu extended history 12
+process cpu autoprofile hog
+clock calendar-valid
+cef table consistency-check IPv4 type lc-detect count 71 period 60
+cef table consistency-check IPv4 type scan-lc-rp count 71 period 60
+cef table consistency-check IPv4 type scan-rp-lc count 71 period 60
+cef table consistency-check IPv4 type scan-rib-ios count 1000 period 60
+cef table consistency-check IPv4 type scan-ios-rib count 1000 period 60
+no cef table consistency-check IPv4 data-checking
+no cef table consistency-check IPv4 error-message
+cef table consistency-check IPv4 auto-repair delay 10 holddown 300
+cef table consistency-check IPv6 type lc-detect count 26 period 60
+cef table consistency-check IPv6 type scan-lc-rp count 26 period 60
+cef table consistency-check IPv6 type scan-rp-lc count 26 period 60
+cef table consistency-check IPv6 type scan-ios-rib count 1000 period 60
+no cef table consistency-check IPv6 data-checking
+no cef table consistency-check IPv6 error-message
+cef table consistency-check IPv6 auto-repair delay 10 holddown 300
+cef table vrf tree IPv4 type MTRIE short-mask-protection 4 stride-pattern 8-8-8-8 hardware-api-notify off
+cef table vrf tree IPv6 type RTREE
+cef table output-chain build favor default
+cef table rate-monitor-period 5
+cef table download recursive-dependents priority 1
+cef table download default-route priority 1
+cef table download connected-route priority 2
+cef table download receive-route priority 2
+cef table download route-in-vrf priority 3
+cef table download catch-all priority 4
+!
+no software auto-upgrade source url 
+!
+software auto-upgrade enable
+!
+no eap key-name compliance
+no cisp enable
+vtp mode off
+fhrp version vrrp v2
+ standby redirects
+ standby bfd all-interfaces
+ standby sso
+ip subnet-zero
+no ip source-route
+ip routing protocol purge interface
+ip routing
+no ip arp proxy disable
+ip arp queue 512
+ip arp incomplete retry 20
+ip arp incomplete entries 5000
+ip arp incomplete enable
+ip sticky-arp
+ip gratuitous-arps non-local
+ip icmp rate-limit unreachable 500
+ip icmp redirect subnet
+ip icmp od-length enable
+ip spd queue max-threshold 74
+ip spd queue min-threshold 73
+ip verify drop-rate compute window 300
+ip verify drop-rate compute interval 30
+ip verify drop-rate notify hold-down 300
+!
+!
+!
+ip nbar classification dns learning cache-ttl-zero
+ip nbar classification dns classify-by-domain
+!
+!
+!
+!
+no ip bootp server
+no ip hostname strict
+ip name-server 198.18.133.1
+ip domain timeout 5
+ip domain periodic-resolve 240
+no ip domain lookup recursive
+ip domain lookup
+ip domain lookup nsap
+ip domain name dcloud.cisco.com
+ip domain multicast in-addr.arpa
+ip domain recursive retry 10
+no ip domain recursive allow-soa
+ip pgm host ttl 255
+ip pgm host stream-type apdu
+ip pgm host nak-gen-ivl 60000
+ip pgm host nak-rb-ivl 500
+ip pgm host nak-rpt-ivl 2000
+ip pgm host nak-rdata-ivl 2000
+ip pgm host rx-buffer-mgmt minimum
+ip pgm host tpdu-size 1400
+ip pgm host ihb-min 1000
+ip pgm host ihb-max 10000 
+ip pgm host join 0
+ip pgm host spm-ambient-ivl 6000
+ip pgm host txw-adv-secs 6000
+ip pgm host txw-adv-timeout-max 3600000
+ip pgm host txw-rte 16384
+ip pgm host txw-secs 30000
+ip pgm host ncf-max 4294967295
+ip pgm host spm-rpt-ivl 3000
+ip pgm host tx-buffer-mgmt return
+ip pgm host txw-adv-method time
+ip pgm router elimination-interval 2
+ip dhcp-server query lease retries 2
+ip dhcp-server query lease timeout 10
+ ip dhcp-client broadcast-flag
+ip dhcp-client default-router distance 254
+ip cef optimize neighbor resolution
+no ip cef accounting 
+ip cef load-sharing algorithm universal 655E9FDC
+ip dhcp relay information policy replace
+ip dhcp relay information check
+ip dhcp use class
+ip dhcp use vrf connected
+ip dhcp binding cleanup interval 120
+ip dhcp compatibility suboption link-selection cisco
+ip dhcp compatibility suboption server-override cisco
+ip dhcp compatibility lease-query client cisco
+ip dhcp conflict logging
+ip dhcp ping packets 2
+ip dhcp ping timeout 500
+!
+!
+!
+ ip dhcp auto-broadcast
+ip igmp ssm-map query dns
+ip igmp snooping report-suppression
+no ip igmp snooping tcn query solicit
+ip igmp snooping tcn flood query count 2
+ip igmp snooping robustness-variable 2
+ip igmp snooping last-member-query-count 2
+ip igmp snooping last-member-query-interval 1000
+ip igmp snooping querier version 2
+ip igmp snooping querier query-interval 60
+ip igmp snooping querier max-response-time 10
+ip igmp snooping querier timer expiry 120
+ip igmp snooping querier tcn query count 2
+ip igmp snooping querier tcn query interval 10
+no ip igmp snooping querier
+ip igmp snooping
+no login delay
+login on-success log
+no login password-warning-interval years
+no login password-warning-interval seconds
+no login password-warning-interval hours
+no login password-warning-interval months
+no login password-warning-interval minutes
+no login password-warning-interval days
+no login password-reuse-interval
+ipv6 hop-limit 64
+ipv6 reassembly-queue length 100
+ipv6 reassembly-queue time-out 60
+ipv6 icmp error-interval 100 10
+ipv6 icmp od-length enable
+ipv6 nd cache expire
+no ipv6 nd ra solicited unicast
+ipv6 nd nsf convergence 120
+ipv6 nd nsf throttle 512
+ipv6 nd nsf dad suppress 60
+ipv6 nd nud limit 256 refresh 10
+ipv6 nd reachable-time 0
+ipv6 nd ns-interval 0
+ipv6 nd resolution data limit 16
+ipv6 nd default-route limit 4
+ipv6 nd dad time 0
+ipv6 nd dad loopback detect
+ipv6 address-validate
+ipv6 nsf-converge 10
+ipv6 traffic interface-statistics
+ipv6 mld snooping listener-message-suppression
+no ipv6 mld snooping tcn query solicit
+ipv6 mld snooping tcn flood query count 2
+ipv6 mld snooping robustness-variable 2
+ipv6 mld snooping last-listener-query-count 2
+ipv6 mld snooping last-listener-query-interval 1000
+no ipv6 mld snooping
+ipv6 dhcp-relay trust-all
+no ipv6 dhcp-relay option vpn
+ipv6 dhcp-relay option client-link-addr
+ipv6 dhcp ping packets 0
+ipv6 dhcp iapd-route-add
+no ipv6 dhcp iana-route-add
+ipv6 dhcp ppp terminate
+ipv6 dhcp ppp framed-prefix cache
+no ipv6 dhcp server vrf enable
+ipv6 spd queue max-threshold 74
+ipv6 spd queue min-threshold 73
+ipv6 cef optimize neighbor resolution
+ipv6 cef load-sharing algorithm universal 655E9FDC
+kerberos timeout 15
+kerberos retry 4
+kerberos processes 1
+l2tp tunnel l2tpv3 accounting headers
+l2tp sso enable
+location algorithm rssi-average
+location expiry calibrating-client 5
+location expiry client 15
+location expiry tags 5
+location notify-threshold client 0
+location notify-threshold tags 5
+location rssi-half-life calibrating-client ENM_HALF_LIFE_TIME_0
+location rssi-half-life client ENM_HALF_LIFE_TIME_0
+location rssi-half-life rogue-aps ENM_HALF_LIFE_TIME_0
+location rssi-half-life tags 0
+location prefer static weight 0
+location prefer lldp-med weight 2
+!
+!
+!
+!
+!
+ntp max-associations 100
+!
+!
+subscriber policy recording profile user
+subscriber policy recording profile service
+subscriber policy recording rules
+subscriber policy recording rules limit 64
+no subscriber policy format_option82_for_cats
+subscriber redundancy dynamic limit cpu 90 delay 10
+subscriber redundancy bulk limit time 480
+subscriber redundancy rate 250 1
+subscriber templating
+! 
+! 
+! 
+! 
+!
+xdr multicast-group mode individual
+xdr multicast-group internal split threshold 7000
+xdr multicast-group internal issu-slots-split
+routing-default-optimize
+mpls label mode all-vrfs protocol all-afs per-prefix
+mpls label range 16 1048575
+mpls ip propagate-ttl
+mpls ip
+mpls oam
+ echo revision 4
+ echo vendor-extension
+ echo jitter 200
+ proxy-ping  
+ no echo reply-mode control-channel allow-reverse-lsp
+no mpls ldp nsr
+no mpls ldp entropy-label
+mpls ldp backoff 15 120
+mpls ldp logging neighbor-changes
+mpls ldp logging password configuration
+mpls ldp logging password rollover
+mpls ldp graceful-restart timers neighbor-liveness 120
+mpls ldp graceful-restart timers max-recovery 120
+mpls ldp graceful-restart timers forwarding-holding 600
+mpls ldp holdtime 180
+mpls ldp discovery hello interval 5
+mpls ldp discovery hello holdtime 15
+mpls ldp discovery targeted-hello interval 10
+mpls ldp discovery targeted-hello holdtime 90
+mpls ldp maxhops 255
+mpls traffic-eng link-management timers periodic-flooding 60
+mpls traffic-eng link-management timers bandwidth-hold 15
+mpls traffic-eng reoptimize timers frequency 3600
+mpls traffic-eng reoptimize timers delay installation 3
+mpls traffic-eng reoptimize timers delay cleanup 10
+mpls traffic-eng reoptimize timers delay after-frr 0
+mpls traffic-eng auto-bw timers frequency 300
+mpls traffic-eng path-selection metric te
+mpls traffic-eng path-selection invalidation 10000
+mpls traffic-eng path-selection tiebreaker not set
+no mpls export vpnv4 prefixes
+no mpls export interval
+no mpls discovery vpn interval
+no mpls discovery vpn next-hop
+avc sd-service
+ segment AppRecognition
+ controller
+  address 198.18.129.100 
+  destination-ports sensor-exporter 21730
+  dscp 16
+  source-interface GigabitEthernet1
+  transport application-updates https url-prefix sdavc
+ !
+!
+!
+authentication dis-scale-opt
+no authentication logging verbose
+authentication command bounce-port ignore
+authentication command disable-port ignore
+authentication critical recovery delay 100
+no access-session wireless event-logging enable session-limit 0 event-limit 0
+no access-session event-logging enable session-limit 0 event-limit 0
+no access-session mac-move deny-uncontrolled
+access-session mac-move deny
+access-session tls-version all
+no access-session voice skip-data-vlan
+access-session cache limit 24000
+no access-session interface-template sticky
+no mab request format attribute 1
+no mab request format attribute 2
+no mab request format attribute 32
+no mab logging verbose
+!
+flow exporter 198.18.129.100
+ destination 198.18.129.100
+ dscp 0
+ ttl 255
+ transport udp 6007
+ export-protocol netflow-v9
+ template data timeout 600
+ match counter packets long gt 0
+!
+!
+flow exporter avc_exporter
+ destination 198.18.129.100
+ source GigabitEthernet1
+ dscp 0
+ ttl 255
+ transport udp 6007
+ export-protocol ipfix
+ template data timeout 600
+ option vrf-table timeout 300
+ option ssid-table timeout 300
+ option application-table timeout 300
+ option application-attributes timeout 300
+ match counter packets long gt 0
+!
+!
+flow exporter avc_local_exporter
+ destination local wlc
+ dscp 0
+ ttl 255
+ transport udp 9995
+ export-protocol netflow-v9
+ template data timeout 600
+ match counter packets long gt 0
+!
+!
+flow monitor avc_ipv4_assurance
+ exporter avc_exporter
+ exporter avc_local_exporter
+ cache timeout inactive 15
+ cache timeout active 60
+ cache timeout update 1800
+ cache timeout synchronized 600
+ no cache timeout event transaction-end
+ cache type normal
+ cache entries 200000
+ statistics packet protocol
+ statistics packet size
+ record wireless avc ipv4 assurance
+!
+!
+flow monitor avc_ipv6_assurance
+ exporter avc_exporter
+ exporter avc_local_exporter
+ cache timeout inactive 15
+ cache timeout active 60
+ cache timeout update 1800
+ cache timeout synchronized 600
+ no cache timeout event transaction-end
+ cache type normal
+ cache entries 200000
+ statistics packet protocol
+ statistics packet size
+ record wireless avc ipv6 assurance
+!
+!
+flow monitor avc_ipv4_assurance_rtp
+ exporter avc_exporter
+ cache timeout inactive 15
+ cache timeout active 60
+ cache timeout update 1800
+ cache timeout synchronized 600
+ no cache timeout event transaction-end
+ cache type normal
+ cache entries 200000
+ statistics packet protocol
+ statistics packet size
+ record wireless avc ipv4 assurance-rtp
+!
+!
+flow monitor avc_ipv6_assurance_rtp
+ exporter avc_exporter
+ cache timeout inactive 15
+ cache timeout active 60
+ cache timeout update 1800
+ cache timeout synchronized 600
+ no cache timeout event transaction-end
+ cache type normal
+ cache entries 200000
+ statistics packet protocol
+ statistics packet size
+ record wireless avc ipv6 assurance-rtp
+!
+no device-tracking logging packet drop
+no device-tracking logging theft
+no device-tracking logging resolution-veto
+no device-tracking tracking
+multilink virtual-template 0
+multilink bundle-name authenticated
+frame-relay address registration auto-address
+ glbp sso
+clns configuration-time 60
+clns holding-time 300
+clns packet-lifetime 64
+clns queue-depth 100
+clns security pass-through
+no clns want-erpdu
+isis display delimiter return 1
+no metadata flow transmit
+!
+!
+!
+stcapp timer roh 45
+stcapp security mode none
+!
+stcapp call-control mode standard
+!
+!
+fqdn ttl-timeout-factor 10
+scripting tcl low-memory 997707909
+no virtual-template snmp
+per-call export primary bootflash: secondary bootflash:
+per-call shutdown
+no cts logging verbose
+no cts sg-epg translation
+no cts environment-data enable
+!
+no cts sxp enable
+cts sxp retry period 120
+cts sxp reconciliation period 120
+no cts sxp log binding-changes
+cts sxp mapping network-map 0
+cts sxp speaker hold-time 120
+cts sxp listener hold-time 90 180
+cts sxp node-id 0
+no cts sxp filter-enable
+!
+crypto pki server WLC_CA
+ database level minimum
+ database archive pkcs12 password 7 070C285F4D06485744
+ issuer-name O=Cisco Virtual Wireless LAN Controller, CN=CA-vWLC_C9800-WLC
+ grant auto
+ hash sha256
+ lifetime crl 6
+ lifetime certificate 3652
+ lifetime ca-certificate 3652
+ lifetime enrollment-request 168
+crypto pki token default removal timeout 0
+crypto pki token default max-retries 15
+!
+crypto pki trustpoint TP-self-signed-1257039420
+ enrollment retry count 999
+ enrollment retry period 1
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1257039420
+ revocation-check none
+ rsakeypair TP-self-signed-1257039420
+ hash sha1
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment retry count 999
+ enrollment retry period 1
+ enrollment pkcs12
+ revocation-check crl
+ hash sha1
+!
+crypto pki trustpoint WLC_CA
+ enrollment retry count 999
+ enrollment retry period 1
+ revocation-check crl
+ rsakeypair WLC_CA
+ hash sha1
+!
+crypto pki trustpoint C9800-WLC_WLC_TP
+ enrollment retry count 999
+ enrollment retry period 1
+ enrollment url http://198.18.134.100:80
+ serial-number
+ password 7 00071A1507545A545C
+ subject-name O=Cisco Virtual Wireless LAN Controller, CN=C9800-WLC_WLC_TP
+ revocation-check crl
+ rsakeypair C9800-WLC_WLC_TP
+ hash sha256
+ eku request server-auth client-auth 
+!
+crypto pki trustpoint DNAC-CA
+ enrollment retry count 999
+ enrollment retry period 1
+ enrollment mode ra
+ enrollment terminal
+ usage ssl-client
+ revocation-check crl none
+ authorization username subjectname  
+ authorization username subjectname  secondary
+ hash sha1
+!
+crypto pki trustpoint sdn-network-infra-iwan
+ enrollment retry count 999
+ enrollment retry period 1
+ enrollment url http://198.18.129.100:80/ejbca/publicweb/apply/scep/sdnscep
+ fqdn C9800-WLC.dcloud.cisco.com
+ subject-name CN=C9800-CL-K9_9YLDKDUP0SZ_sdn-network-infra-iwan
+ subject-alt-name C9800-WLC.dcloud.cisco.com
+ revocation-check crl
+ source interface GigabitEthernet1
+ rsakeypair sdn-network-infra-iwan
+ auto-enroll 80 regenerate
+ hash sha1
+!
+!
+crypto pki certificate chain TP-self-signed-1257039420
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31323537 30333934 3230301E 170D3231 30313037 31393531 
+  30345A17 0D333130 31303731 39353130 345A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 32353730 
+  33393432 30308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 010099AA 7278B11A B26640F6 BE8B1A83 C7BC3B8F 26895586 34587A47 
+  353010F5 71F331AA CC31A5BF 71593C5E BA570E34 52F43893 9466A3BF A62EC331 
+  73A5C3A3 4DE1CD7E E9327B4E 07E90E4A AB016DE7 5107253F C97DFF06 D827A5E7 
+  3B7666CA E034D4B0 14BF434A 6B042EA7 D9FCE4EA 4AB86EE0 B52BBE12 EDC04E3A 
+  1E414E99 9E652EEE 0CD74FB3 33215494 B59ECC6F C749D078 4D5AE0FE EFA8E8C4 
+  473307AD 90EBB9FE DAFF6BF8 81083C3A 3E58667F 37E4B72E 415858C7 2B5950C4 
+  2AEA684E 7087947A C2DAE71B 79857E38 977A8CF8 42AF1301 50B65966 458DC153 
+  832F37D4 D5223C4D E8861492 393A2CD4 C2853FE3 9A095178 08E974AB 4EF1CEE9 
+  1F01BBDA 6BA90203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14709A88 5A1ABC59 4B7B36D3 4F3396CB 33F9733C 
+  25301D06 03551D0E 04160414 709A885A 1ABC594B 7B36D34F 3396CB33 F9733C25 
+  300D0609 2A864886 F70D0101 05050003 82010100 738A227B 631C1FE4 BFEBAFAE 
+  2D79037B A2E27420 32446078 A80E1F5E F1D30353 B79A7AA8 EC054BAE 16866306 
+  EB99E732 05C05318 C71E125E 0303DCA7 5D5ACB27 AA6C53CD 20A81667 850E6ACE 
+  8FE53FA3 D7A43E08 05A9892A 2AB21DCF C5A4444C E570DD05 05004E61 792F3FAC 
+  056BDE6B A3CEB043 63C20151 4FAAB6F0 926F6F1A 86FF66D8 8D2ED89F 9F5AF0B3 
+  4036AEC5 CA5232B9 3C10403F 4B1F2EC8 5BCF2B85 AB5A12BC CA997090 FE50088D 
+  A7B30941 60E4B96F 62D959E9 9C823631 4BC5A03B 9A04BFFA D163E3AC 8197A309 
+  ED665D2C 71A43141 739C156B 02D1D75A 818EDC81 85731FB4 3F1C4093 18DD6BDF 
+  B9853587 1C987D69 6AF3ABBF 85093831 D43EBAD4
+  	quit
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain WLC_CA
+ certificate ca 01
+  30820376 3082025E A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  4C311A30 18060355 04030C11 43412D76 574C435F 43393830 302D574C 43312E30 
+  2C060355 040A1325 43697363 6F205669 72747561 6C205769 72656C65 7373204C 
+  414E2043 6F6E7472 6F6C6C65 72301E17 0D323130 37303732 31313834 315A170D 
+  33313037 30373231 31383431 5A304C31 1A301806 03550403 0C114341 2D76574C 
+  435F4339 3830302D 574C4331 2E302C06 0355040A 13254369 73636F20 56697274 
+  75616C20 57697265 6C657373 204C414E 20436F6E 74726F6C 6C657230 82012230 
+  0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 82010100 ABC03764 
+  2434E426 F6B573A5 1D3C4EE3 19E9BD26 B1503B15 9892F0F5 092FB7A3 07932CA4 
+  81F4B228 88AFDDC8 F3E41312 4EB04F01 D7AE0476 8228E93A 85B1FCB0 0F994141 
+  702385BA 6811A46E 2CEBF24F A43DCD93 C16A94F3 EBFFAE4E 73BEAA0E 6F72B09F 
+  88912A28 2447DAC4 22EFCF58 CE014489 9A75D3B8 A20E19CD 7D89EDA6 A615FE00 
+  5D71F989 C5599CF8 026B07C9 979202DC AE649E7C 4E56196D 9E13C114 B5D7DD09 
+  76C4227C 89E3E8D1 36414C09 87D2483B EBFCEBA5 D36D7C35 685803FD 616D9E34 
+  CE1D7033 FA81382E C57495FA A76772CD F84F7E2A FA72DE1F 588CD42C 48A2A64C 
+  3D52692C 6404773D 7BD5190D F77BE1C7 1AE86AB5 86096C08 3B9190A7 02030100 
+  01A36330 61300F06 03551D13 0101FF04 05300301 01FF300E 0603551D 0F0101FF 
+  04040302 0186301F 0603551D 23041830 16801407 D62C4222 C522CF8B D05C05FB 
+  44CD65D2 78540F30 1D060355 1D0E0416 041407D6 2C4222C5 22CF8BD0 5C05FB44 
+  CD65D278 540F300D 06092A86 4886F70D 01010B05 00038201 01004E3B 8A4F1133 
+  E840C29B B4A0697B F7ABFAD7 DC765F18 D8183CF3 299B1710 284EAC45 3D9DAAFA 
+  7DB47606 0104FEBC FBF3B2AE 7CA657ED F5DD75E1 5D35E841 DD8DF662 0AEE5096 
+  12EFDDB8 71B6D15D EC3A07F0 64AEE768 8D7859D8 91A874CD A3AA0E96 4BCA33B1 
+  AC9827F2 CFB83547 E3F63A6A D40C09C4 A71C530B 77166791 B3160CED 2C300E43 
+  3FCBDFB6 9825A831 73D01E15 754FF23C 334D9681 8B4CA35F D795AE0A 1B9A3E7F 
+  3425FF00 2DC2C20C 547D3D13 0F95C6F9 B7442C3A 360B08A5 C2484366 3973327E 
+  0F489FBA 186BAC00 EFFE4244 96F67016 CB757E10 14CE053D 2561DB2A B49C191E 
+  DB995F7C EC5542AD 08AA2B23 FEAAC09E 18BBE5D1 F971DEB2 B315
+  	quit
+crypto pki certificate chain C9800-WLC_WLC_TP
+ certificate 02
+  308203C0 308202A8 A0030201 02020102 300D0609 2A864886 F70D0101 0B050030 
+  4C311A30 18060355 04030C11 43412D76 574C435F 43393830 302D574C 43312E30 
+  2C060355 040A1325 43697363 6F205669 72747561 6C205769 72656C65 7373204C 
+  414E2043 6F6E7472 6F6C6C65 72301E17 0D323130 37303732 31313834 365A170D 
+  33313037 30373231 31383431 5A30818A 31193017 06035504 030C1043 39383030 
+  2D574C43 5F574C43 5F545031 2E302C06 0355040A 13254369 73636F20 56697274 
+  75616C20 57697265 6C657373 204C414E 20436F6E 74726F6C 6C657231 3D301206 
+  03550405 130B3959 4C444B44 55503053 5A302706 092A8648 86F70D01 0902161A 
+  43393830 302D574C 432E6463 6C6F7564 2E636973 636F2E63 6F6D3082 0122300D 
+  06092A86 4886F70D 01010105 00038201 0F003082 010A0282 010100C9 4E7F82A3 
+  708E612F E9A95BF8 24FE2A1D 54FE7D29 D2752E61 D65DAB75 D50D787D 1E848353 
+  4479A364 CF8A84B7 9D6B796F E7D051E4 3EE39D31 1D081EAD 9150EB0A 2DF81790 
+  248480F7 C1F1876D 2EDBD717 D1737F37 C1B43675 86447F44 514280CD B6A6FBF1 
+  F35F4D17 A345BCCA 1E4445EB 9BD1E14B 352EDF51 72D151C3 2CF4B123 AAAAEEDB 
+  65BE4381 02063D38 AF97980E AB31E72E 1D93F0A1 325E5C0D D73AEC02 020969D8 
+  775ECA72 B6CD7D6C E27D779B 7AADBDFF 818235A1 D0CD5A57 EB51A16F 62AE2C0A 
+  39CBA44F 18E3A4ED 81272482 24A88FB1 7FB3F6B0 08F76A94 4BFD106A 9624E303 
+  6154009B BA919215 76271ADB 8D84D0C0 0D782048 2BE94D50 F5BB3702 03010001 
+  A36E306C 301D0603 551D2504 16301406 082B0601 05050703 0106082B 06010505 
+  07030230 0B060355 1D0F0404 030205A0 301F0603 551D2304 18301680 1407D62C 
+  4222C522 CF8BD05C 05FB44CD 65D27854 0F301D06 03551D0E 04160414 4ABA35B0 
+  DC8B481F A8284D19 4743CD7A 0362BEF5 300D0609 2A864886 F70D0101 0B050003 
+  82010100 6DCAE88A 97A7B846 0A9E0D29 7B5CC8A5 9EAF0EBF E888F739 24FF50B6 
+  7753C631 C9F12D5B 231F9ACA E5E4A742 5659CD06 E1B09DE7 B0109D29 3C3EE413 
+  8CD587E3 4809DD9B 21528845 3CAB308F 365B9471 7DCDC8C2 827E8953 4B278B96 
+  D4E8DAE0 68D34B4B 79C45895 2EE2325A E3FC38AD CFFBB79B FC66BDB0 4A987179 
+  6A6280DB 98F5A6A6 78244C84 40930B26 37A9E2BA E06F29E3 9C37BD72 641BC5F2 
+  3F3AEB22 414150EC 66152A13 14263739 B8382D2A 66856148 3292DF7B 33470882 
+  B3DF6F19 A8FDA1CE 5441B306 E85989D9 6BE9BD5C 3ED5EF3E 918936E9 7BD0A200 
+  C9FB8B7E 029147AD F4BAB926 FCEBB608 21F61781 EC32D2B8 8FBF9488 CFBF972B 
+  4F3679CA
+  	quit
+ certificate ca 01
+  30820376 3082025E A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  4C311A30 18060355 04030C11 43412D76 574C435F 43393830 302D574C 43312E30 
+  2C060355 040A1325 43697363 6F205669 72747561 6C205769 72656C65 7373204C 
+  414E2043 6F6E7472 6F6C6C65 72301E17 0D323130 37303732 31313834 315A170D 
+  33313037 30373231 31383431 5A304C31 1A301806 03550403 0C114341 2D76574C 
+  435F4339 3830302D 574C4331 2E302C06 0355040A 13254369 73636F20 56697274 
+  75616C20 57697265 6C657373 204C414E 20436F6E 74726F6C 6C657230 82012230 
+  0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 82010100 ABC03764 
+  2434E426 F6B573A5 1D3C4EE3 19E9BD26 B1503B15 9892F0F5 092FB7A3 07932CA4 
+  81F4B228 88AFDDC8 F3E41312 4EB04F01 D7AE0476 8228E93A 85B1FCB0 0F994141 
+  702385BA 6811A46E 2CEBF24F A43DCD93 C16A94F3 EBFFAE4E 73BEAA0E 6F72B09F 
+  88912A28 2447DAC4 22EFCF58 CE014489 9A75D3B8 A20E19CD 7D89EDA6 A615FE00 
+  5D71F989 C5599CF8 026B07C9 979202DC AE649E7C 4E56196D 9E13C114 B5D7DD09 
+  76C4227C 89E3E8D1 36414C09 87D2483B EBFCEBA5 D36D7C35 685803FD 616D9E34 
+  CE1D7033 FA81382E C57495FA A76772CD F84F7E2A FA72DE1F 588CD42C 48A2A64C 
+  3D52692C 6404773D 7BD5190D F77BE1C7 1AE86AB5 86096C08 3B9190A7 02030100 
+  01A36330 61300F06 03551D13 0101FF04 05300301 01FF300E 0603551D 0F0101FF 
+  04040302 0186301F 0603551D 23041830 16801407 D62C4222 C522CF8B D05C05FB 
+  44CD65D2 78540F30 1D060355 1D0E0416 041407D6 2C4222C5 22CF8BD0 5C05FB44 
+  CD65D278 540F300D 06092A86 4886F70D 01010B05 00038201 01004E3B 8A4F1133 
+  E840C29B B4A0697B F7ABFAD7 DC765F18 D8183CF3 299B1710 284EAC45 3D9DAAFA 
+  7DB47606 0104FEBC FBF3B2AE 7CA657ED F5DD75E1 5D35E841 DD8DF662 0AEE5096 
+  12EFDDB8 71B6D15D EC3A07F0 64AEE768 8D7859D8 91A874CD A3AA0E96 4BCA33B1 
+  AC9827F2 CFB83547 E3F63A6A D40C09C4 A71C530B 77166791 B3160CED 2C300E43 
+  3FCBDFB6 9825A831 73D01E15 754FF23C 334D9681 8B4CA35F D795AE0A 1B9A3E7F 
+  3425FF00 2DC2C20C 547D3D13 0F95C6F9 B7442C3A 360B08A5 C2484366 3973327E 
+  0F489FBA 186BAC00 EFFE4244 96F67016 CB757E10 14CE053D 2561DB2A B49C191E 
+  DB995F7C EC5542AD 08AA2B23 FEAAC09E 18BBE5D1 F971DEB2 B315
+  	quit
+crypto pki certificate chain DNAC-CA
+ certificate ca 793059A33720EC1B2C55EC8FD463377B887C99FD
+  308203A5 3082028D A0030201 02021479 3059A337 20EC1B2C 55EC8FD4 63377B88 
+  7C99FD30 0D06092A 864886F7 0D01010B 05003062 312D302B 06035504 030C2439 
+  31633436 6339392D 37306463 2D643564 312D3265 64372D30 31663262 37316264 
+  34313931 16301406 0355040A 0C0D4369 73636F20 53797374 656D7331 19301706 
+  0355040B 0C104369 73636F20 444E4120 43656E74 6572301E 170D3231 30343330 
+  31353330 33395A17 0D323430 31323531 35333033 395A3062 312D302B 06035504 
+  030C2439 31633436 6339392D 37306463 2D643564 312D3265 64372D30 31663262 
+  37316264 34313931 16301406 0355040A 0C0D4369 73636F20 53797374 656D7331 
+  19301706 0355040B 0C104369 73636F20 444E4120 43656E74 65723082 0122300D 
+  06092A86 4886F70D 01010105 00038201 0F003082 010A0282 010100FC 0326F7C0 
+  5F3DF20A 0956AE31 3662F12C AC76C88D F3B04CF2 CB913CF9 B316AF1C 34DAC64F 
+  5BC4E24C 0D7BAB8E 0D4D0AC8 B17206CE 7FAD9A5D 10549676 058D5EE1 D6D2745B 
+  F709A829 8F8EE18B BC55C465 50821587 AE6FE6E0 25026EA8 1306D97D C27BDD2F 
+  3881E8ED B3E74959 E43EB081 8318B41A 162DE4E4 F1455841 6E42E3ED ACEB31C0 
+  00437B17 904FCBE7 CC28EDE6 C4D8E5AA 3CA8D8EA 6D4A72BF 824EFE86 9BA7F995 
+  03A9D1D1 82FE0808 8AE29BCA 1D3E9F08 CCF4A8D2 E0E90AF7 81E27E2E 1937C36F 
+  D45BC33D FDF104F3 36F9BAE4 78852CB3 F06633D3 13115A47 A4BD6029 3ECCC9D6 
+  5F3F4839 2EC8A301 E62C87CD 6AC69C5C 8AF71B98 0A5F9E52 F9AE7D02 03010001 
+  A3533051 301D0603 551D0E04 160414B2 3C362024 A166967C B2C5A7A3 20700AFA 
+  79B03A30 1F060355 1D230418 30168014 B23C3620 24A16696 7CB2C5A7 A320700A 
+  FA79B03A 300F0603 551D1301 01FF0405 30030101 FF300D06 092A8648 86F70D01 
+  010B0500 03820101 00BAD3A3 E0E712F3 4C1BD74A D9409256 869B2CF2 4AC95583 
+  BE9DF4D7 B7FB3FB3 A26D6E6A F25A8E6B B541870F 273B2571 6A2AC827 E52CA38B 
+  54A2DCB0 86BC333C C8D25CB0 A5FACA8B 30587C44 C6489581 80DA2295 B906A64A 
+  7DC2B1C2 BBEBC304 FE62D581 17C080A8 2B77A220 CE2F90F9 BA9050DB 9F8D96B8 
+  4AABEA79 4B9D4E61 655C78EA A0EE05D0 23392FCB 45A16FF4 0FCB52DC 3878B355 
+  2E76657C 20E7C6E9 76EECA1C C4BCF2AA FAAD39E3 B7FF0A01 B07315CB A8EF2B5D 
+  2505AE02 2E757D99 8C05BE33 E8E12364 FB1E4474 5C6B5F83 21941A9E 3C704A00 
+  B5F51FA6 0AB06D82 DEB84139 7D5D9F6A F10796ED 27702849 C4C61BEF F92DB6E1 
+  49066C68 3BEAC3C6 FC
+  	quit
+crypto pki certificate chain sdn-network-infra-iwan
+ certificate 3A3111FE5BD6E303
+  30820384 3082026C A0030201 0202083A 3111FE5B D6E30330 0D06092A 864886F7 
+  0D01010D 0500301F 311D301B 06035504 030C1473 646E2D6E 6574776F 726B2D69 
+  6E667261 2D636130 1E170D32 32313032 35303730 3035385A 170D3233 31303235 
+  30373030 35385A30 64312930 2706092A 864886F7 0D010902 0C1A4339 3830302D 
+  574C432E 64636C6F 75642E63 6973636F 2E636F6D 31373035 06035504 030C2E43 
+  39383030 2D434C2D 4B395F39 594C444B 44555030 535A5F73 646E2D6E 6574776F 
+  726B2D69 6E667261 2D697761 6E308201 22300D06 092A8648 86F70D01 01010500 
+  0382010F 00308201 0A028201 01009CD0 920EC9A4 C2B474C9 4C76C84D C6138FF4 
+  98DC9E4A 56A69598 53021DF2 1B62CF35 BBCAAB66 DB1A460D EE4AD3F2 6CD2A02D 
+  4247D0B3 041E6006 CBDF51BD 73582D6E 23B838E5 2D76823E A35DC57A 0409A925 
+  AE59E7F4 D4822B32 84EAB0F0 C1B39B9D 316A9DC5 786E09EC 479514A5 439926D8 
+  69466441 7AA514B2 A2D9422B 3B5A9100 99060101 A29A2BC5 8F15B717 3F4F702A 
+  269825E4 CDED973F EAC09DB9 A7F4D200 0FCF44B7 4DF1C33F 92EAB2C1 478486F1 
+  A53484C1 3E89AF6B C2B14337 2DDA0FF4 D25F18D9 D8D2E5BE 6D3B6D79 2FCF33E1 
+  F13C6A0F 7857DF4E 2A58C062 72F8B0B9 B42F8732 9CB6FC8D 964C439B 9943250B 
+  EAE573DB FF919D5C 2CF744F8 23930203 010001A3 7F307D30 0C060355 1D130101 
+  FF040230 00301F06 03551D23 04183016 8014D84E 7A10AC4D C0155C26 AE6EC6E0 
+  3CFF8EB7 17F0301D 0603551D 25041630 1406082B 06010505 07030206 082B0601 
+  05050703 04301D06 03551D0E 04160414 6753B77A BD71AF31 E29B13AF 832BFD05 
+  E9B769A7 300E0603 551D0F01 01FF0404 030205E0 300D0609 2A864886 F70D0101 
+  0D050003 82010100 85034B81 C8A57243 7D18E5B1 7284D6F6 571F3CC6 400E2C78 
+  67587277 A2A8B437 A873A30D 98D01AC5 F0017DDD 72EC96B6 2D1C26CF F49D9384 
+  E5AC0BB6 8C145723 95C623CE 100C6C0F B55425DC 95FB4C85 6888D7AA 5B4436B1 
+  BC0DF5DA 4DD91743 F7114966 9F3E4967 0FEC9B14 635785D7 84587E6C 0EF53693 
+  5989C7E4 2AE301AA 590B5313 76DA8307 F4C160D8 6F7ECCC9 876F99B1 3BD8A79F 
+  220AAE79 1639EAB0 902FEB5A 7A20894C E1B0A341 58A52B98 2B26DB80 BC090D49 
+  2A64CE3E C0947F76 02512FBC E1DD22AF CFE81025 0DF7277A EE5E844A 0315FA98 
+  D976A06F B74C33BC 24B4BA71 30264A3C 8B188888 BC9936B8 947C2A72 9230280C 
+  12D6A733 3BE84B02
+  	quit
+ certificate ca 2626AF06368C7FDD
+  30820323 3082020B A0030201 02020826 26AF0636 8C7FDD30 0D06092A 864886F7 
+  0D01010D 0500301F 311D301B 06035504 030C1473 646E2D6E 6574776F 726B2D69 
+  6E667261 2D636130 1E170D32 31303433 30313833 3233335A 170D3336 30343330 
+  31383332 33335A30 1F311D30 1B060355 04030C14 73646E2D 6E657477 6F726B2D 
+  696E6672 612D6361 30820122 300D0609 2A864886 F70D0101 01050003 82010F00 
+  3082010A 02820101 00B0B708 32A999B3 1C36F136 ED52F7FC 2D7E8660 2BDA5B92 
+  716909BC 2BCBDA7D 1CA132E9 E3D2B3BA 2E605BF3 205A3A9E 92C5544D 4222A83D 
+  846B2A45 0DCBB6B7 76588666 2FCB8A33 152DFA5C 20A6BF4C 342AC72F EAD0DE10 
+  ABC3C0E6 7F7420EB 666FE9CE 11E302E2 B4E550F6 D18CAA18 542348A9 757EBBE9 
+  8900FC96 BA1146B8 AFDBEC3F 6D62D05F F040BACD 5394882D 8A84C568 2D85A3AA 
+  B18C7329 57D8B535 ACC5F48C 267DD7AF EB94AB36 1938C023 5C19BFFE 91C573FE 
+  3EC046A6 5BDD7639 8810AF09 1EFD474A ED5FF94B FFC088A7 416C4131 862DA363 
+  39667F5C 759EE864 F375F058 55DF5779 EA6A33E9 524D3616 64A48CAC 0AD802DE 
+  45FB0E1F 7CBE42D1 69020301 0001A363 3061300F 0603551D 130101FF 04053003 
+  0101FF30 1F060355 1D230418 30168014 D84E7A10 AC4DC015 5C26AE6E C6E03CFF 
+  8EB717F0 301D0603 551D0E04 160414D8 4E7A10AC 4DC0155C 26AE6EC6 E03CFF8E 
+  B717F030 0E060355 1D0F0101 FF040403 02018630 0D06092A 864886F7 0D01010D 
+  05000382 01010058 A33A7E83 1E29EEDD A420A177 614B6286 DBB4DB81 6461A973 
+  59F8C838 8850A73F 83D56B20 287BEF10 F0F3DF0B EB8486D2 14069DA7 F1B0703F 
+  8F5104B1 6F555DDE 520FC7ED FD29831F 2A995E2C BCAD15E8 EAA66723 D509809C 
+  65FBE289 337FE6F4 D30502DC 12CD0F30 CD6772DD 8B83FA1B C3F948E5 A05EE4BC 
+  D9C86B68 2AC1E046 51318468 66C368F3 E6699518 20C186E1 DF6734FA A23667F2 
+  A279ACB0 B01289DB D316A9F0 89C1CE76 91317E9A 1937334A 1087C567 B1E3FEB9 
+  8D9457B1 0BBC061D 56F3FB35 3E11B432 F6558AA1 7561348E A5348DB7 099F8245 
+  1C44EE9B F44493A5 05519D28 ECF78940 108040CE F81E3A43 5837AAA4 F789272A 
+  F255234D 9E71F2
+  	quit
+!
+crypto pki crl download schedule prepublish 0
+crypto pki crl download schedule retries 5
+crypto pki crl download schedule retries interval 30
+crypto pki crl cache size 64
+!
+voice call trap deviation 49
+voice call trap deviation 49 vad
+no voice call send-alert
+no voice call disc-pi-off
+no voice call convert-discpi-to-prog
+no voice call debug full-guid
+no voice rtp send-recv
+no voice disc-pi-incoming-on
+voice dsp crash-dump file-limit 0
+!
+!
+voice class uri sip preference host user-id
+!
+!
+no voice lpcor enable
+voice lpcor call-block cause serv/opt-unavail-unspecified
+no voice lpcor custom
+!
+no voice lpcor ip-trunk subnet incoming
+!
+no voice lpcor ip-phone subnet incoming
+!
+no voice lpcor ip-phone subnet outgoing
+!
+no voice lpcor ip-phone mobility incoming
+no voice lpcor ip-phone mobility outgoing
+no voice mlpp
+voice statistics max-storage-duration
+voice statistics display-format separator
+voice statistics field-params mcd 2
+voice statistics field-params lost-packet 1000
+voice statistics field-params packet-latency 250
+voice statistics field-params packet-jitter 250
+voice statistics push ftp max-file-size 4294967295
+!
+no voice persistent-storage
+no voice pcm capture buffer
+no voice pcm capture destination
+no voice pcm capture on-demand-trigger
+voice pcm capture user-trigger-string #123 #456 stream 7 duration 0
+!
+!
+no media service
+http client cache memory pool 10000
+http client cache memory file 50
+no http client cache query
+http client cookie
+http client connection persistent
+http client connection timeout 5
+http client connection idle timeout 2
+http client response timeout 10
+ivr prompt cutoff-threshold 500
+ivr prompt streamed none
+ivr record memory system 10240
+ivr record memory session 250
+ivr record jitter tftp: 32000
+ivr record jitter http: 32000
+ivr record cpu flash 15
+mrcp client timeout connect 3
+mrcp client timeout message 3
+mrcp client session history duration 10
+mrcp client session history records 50
+mrcp client session nooffailures 5
+mrcp client accept-charset-compliance
+mrcp client codec g711alaw
+license udi pid C9800-CL-K9 sn 9YLDKDUP0SZ
+license agent max-sessions 9
+license call-home url https://tools.cisco.com/SWIFT/Licensing
+license smart transport off
+port-channel load-balance src-dst-ip
+port-channel auto
+service-template webauth-global-inactive
+ inactivity-timer 3600 
+service-template DEFAULT_LINKSEC_POLICY_MUST_SECURE
+ linksec policy must-secure
+service-template DEFAULT_LINKSEC_POLICY_SHOULD_SECURE
+ linksec policy should-secure
+service-template DEFAULT_CRITICAL_VOICE_TEMPLATE
+ voice vlan
+service-template DEFAULT_CRITICAL_DATA_TEMPLATE
+no dot1x logging verbose
+no dot1x auth-fail eapol
+no dot1x critical eapol
+no dot1x critical eapol block
+dot1x supplicant force-multicast
+dot1x supplicant controlled transient
+device classifier
+no flowspec
+diagnostic event-log size 500
+diagnostic bootup level minimal
+no diagnostic monitor syslog
+no diagnostic cns publish
+no diagnostic cns subscribe
+memory check-interval 60
+memory statistics history table 24
+memory validate-checksum 60
+memory lite
+memory chunk siblings threshold 10000
+memory free low-watermark processor 72740
+file privilege 15
+file prompt alert
+no file verify auto
+!
+no object-group knob check-normal-entry-dup 
+object-group knob check-nested-entry-dup enable
+object-group knob expand-v6-ace-for-pd enable
+issu set rollback-timer 2700
+remote-management
+  no dmi
+svl l2bum optimization
+lacp system-priority 32768
+!
+username admin privilege 15 secret 9 $9$CoXfpldTteSlAU$ptX88Vv.udZhTFBjfkc7Neweq.udzbYncj74YIMfOGU
+username dnacadmin privilege 15 password 7 112A4816141D5A5E577E7E
+!
+redundancy
+ mode sso
+ policy config-sync lbl prc reload
+ policy config-sync bulk prc reload
+ main-cpu
+  no standby console enable
+  no standby console lock
+!
+crypto engine software ipsec
+no crypto engine software isakmp
+crypto ikev2 authorization policy default
+ route set interface
+ route accept any
+!
+crypto ikev2 proposal default
+ encryption aes-cbc-256
+ integrity sha512 sha384
+ group 19 14 21 5
+!
+crypto ikev2 policy default
+ match fvrf any
+ proposal default
+!
+crypto ikev2 nat keepalive 0
+crypto ikev2 diagnose error 50
+crypto ikev2 dpd 0 0 periodic
+crypto ikev2 limit max-in-negotation-sa 400 outgoing
+crypto ikev2 limit max-in-negotation-sa 40
+crypto ikev2 limit max-sa 0
+crypto ikev2 limit queue sa-init 5000
+crypto ikev2 window 5
+crypto ikev2 fragmentation mtu 576
+md-list 0.0.0.0 0.0.0.0
+md-list 0.0.0.0 0.0.0.0
+md-list 0.0.0.0 0.0.0.0
+md-list 0.0.0.0 0.0.0.0
+md-list 0.0.0.0 0.0.0.0
+md-list 0.0.0.0 0.0.0.0
+md-list 0.0.0.0 0.0.0.0
+md-list 0.0.0.0 0.0.0.0
+!
+process-max-time 50
+!
+vlan internal allocation policy ascending
+cdp advertise-v2
+cdp timer 60
+cdp holdtime 180
+cdp log mismatch duplex
+cdp run
+cdp tlv location
+cdp tlv app
+!
+!
+class-map match-all test-yijxi_VOICE_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class voip-telephony
+class-map match-all test-yijxi_MM_CONF_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class multimedia-conferencing
+class-map match-all test-yijxi_SIGNALING_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class signaling
+class-map match-all test-yijxi_BROADCAST_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class broadcast-video
+class-map match-all test-yijxi_BULK_DATA_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class bulk-data
+class-map match-all test-yijxi_SCAVENGER_078e26e9
+ match protocol attribute business-relevance business-irrelevant
+class-map match-all test-yijxi_MM_STREAM_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class multimedia-streaming
+class-map match-all test-yijxi_OAM_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class ops-admin-mgmt
+class-map match-all test-yijxi_CONTROL_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class network-control
+class-map match-any AVC-Reanchor-Class
+ match protocol cisco-jabber-audio
+ match protocol cisco-jabber-video
+ match protocol webex-media
+ match protocol webex-app-sharing
+ match protocol webex-control
+ match protocol webex-meeting
+ match protocol wifi-calling
+class-map match-all test-yijxi_TRANS_DATA_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class transactional-data
+class-map match-all test-yijxi_REALTIME_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class real-time-interactive
+!
+!
+policy-map test-yijxi_DNA-MARKING_078e26e9
+ class test-yijxi_VOICE_078e26e9
+  set dscp ef
+ class test-yijxi_TRANS_DATA_078e26e9
+  set dscp af21
+ class test-yijxi_SCAVENGER_078e26e9
+  set dscp cs1
+ class test-yijxi_REALTIME_078e26e9
+  set dscp cs4
+ class test-yijxi_MM_STREAM_078e26e9
+  set dscp af31
+ class test-yijxi_BROADCAST_078e26e9
+  set dscp cs5
+ class test-yijxi_OAM_078e26e9
+  set dscp cs2
+ class test-yijxi_SIGNALING_078e26e9
+  set dscp cs3
+ class test-yijxi_MM_CONF_078e26e9
+  set dscp af41
+ class test-yijxi_CONTROL_078e26e9
+  set dscp cs6
+ class test-yijxi_BULK_DATA_078e26e9
+  set dscp af11
+ class class-default
+  set dscp default
+!
+! 
+!
+!
+!
+!
+crypto ssl diagnose error 50
+!
+!
+crypto isakmp diagnose error 50
+crypto ipsec optional retry 300
+!
+crypto ipsec security-association lifetime kilobytes 4608000
+crypto ipsec security-association lifetime seconds 3600
+no crypto ipsec security-association replay disable
+crypto ipsec security-association replay window-size 64
+crypto ipsec security-association dummy
+crypto ipsec security-association ecn discard
+!
+crypto ipsec transform-set default esp-aes esp-sha-hmac 
+ mode transport
+crypto ipsec nat-transparency udp-encapsulation
+!
+crypto ipsec profile default
+ no set security-association dfbit
+ set security-association lifetime kilobytes 4608000
+ set security-association lifetime seconds 3600
+ no set security-association idle-time
+ no set security-association replay window-size 
+ set security-association dummy
+ set security-association ecn
+!
+!
+crypto call admission limit ike sa 0
+crypto call admission limit ike in-negotiation-sa 1000
+crypto call admission limit ipsec sa 0
+crypto mib ipsec flowmib history tunnel size 200
+crypto mib ipsec flowmib history failure size 200
+buffers element permanent 1000
+buffers element minimum 100
+buffers header permanent 256
+buffers header max-free 512
+buffers header min-free 10
+buffers header initial 0
+buffers fastswitching permanent 384
+buffers fastswitching max-free 1024
+buffers fastswitching min-free 128
+buffers fastswitching initial 0
+buffers small permanent 1200
+buffers small max-free 2500
+buffers small min-free 200
+buffers small initial 0
+buffers middle permanent 900
+buffers middle max-free 2000
+buffers middle min-free 100
+buffers middle initial 0
+buffers big permanent 900
+buffers big max-free 1800
+buffers big min-free 50
+buffers big initial 0
+buffers verybig permanent 100
+buffers verybig max-free 300
+buffers verybig min-free 0
+buffers verybig initial 0
+buffers large permanent 100
+buffers large max-free 300
+buffers large min-free 0
+buffers large initial 0
+buffers huge permanent 20
+buffers huge max-free 33
+buffers huge min-free 0
+buffers huge size 18024
+buffers huge initial 0
+no buffers tune automatic
+buffers VeryLarge permanent 100
+buffers VeryLarge max-free 300
+buffers VeryLarge min-free 0
+buffers VeryLarge initial 0
+!
+!
+!
+no service-policy type control subscriber 
+no autoconf enable
+! 
+! 
+!
+!
+interface GigabitEthernet1
+ no switchport
+ ip address 198.18.134.100 255.255.192.0
+ ip clear-dont-fragment
+ ip redirects
+ ip unreachables
+ ip proxy-arp
+ ip mtu 1500
+ ip pim join-prune-interval 60
+ ip pim dr-priority 1
+ ip pim query-interval 30
+ ip mfib forwarding input
+ ip mfib forwarding output
+ ip mfib cef input
+ ip mfib cef output
+ no ip flowspec
+ ip cef accounting non-recursive internal
+ ip load-sharing per-destination
+ ip route-cache cef
+ ip split-horizon
+ ip igmp robustness-variable 2
+ ip igmp last-member-query-interval 1000
+ ip igmp last-member-query-count 2
+ ip igmp query-max-response-time 10
+ ip igmp v3-query-max-response-time 10
+ ip igmp version 2
+ ip igmp query-interval 60
+ ip igmp tcn query count 2
+ ip igmp tcn query interval 10
+ logging event link-status
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ negotiation auto
+ no medium p2p
+  cdp log mismatch duplex
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ ipv6 nd reachable-time 0
+ ipv6 nd ns-interval 0
+ ipv6 nd dad attempts 1
+ ipv6 nd dad loopback detect
+ ipv6 nd prefix framed-ipv6-prefix
+ ipv6 nd nud igp
+ no ipv6 nd ra solicited unicast
+ ipv6 nd ra lifetime 1800
+ ipv6 nd ra interval 200
+  ipv6 redirects
+  ipv6 unreachables
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ no ipv6 flowspec
+ mpls mtu 1500
+ snmp trap link-status
+ no flowspec group
+ arp arpa
+ arp timeout 14400
+ no mop enabled
+ no mop sysid
+ no h323-gateway voip interface
+ ethernet oam max-rate 10
+ ethernet oam min-rate 1 
+ ethernet oam remote-loopback timeout 2
+ ethernet oam timeout 5 
+ hold-queue 375 in
+ hold-queue 40 out
+!
+interface GigabitEthernet2
+ switchport
+ switchport access vlan 1
+ switchport trunk encapsulation negotiate
+ switchport trunk allowed vlan 1
+ no switchport autostate exclude
+ switchport private-vlan trunk encapsulation dot1q
+ switchport private-vlan trunk native vlan tag
+ switchport mode trunk
+ no switchport nonegotiate
+ no switchport protected
+ no switchport block multicast
+ no switchport block unicast
+ no switchport vepa enabled
+ no switchport app-interface
+ switchport priority default 0
+ no switchport priority override
+ logging event link-status
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ negotiation auto
+ no medium p2p
+  cdp log mismatch duplex
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ ipv6 mld snooping tcn flood
+ no ipv6 flowspec
+ mpls mtu 1500
+ snmp trap link-status
+ no flowspec group
+ arp arpa
+ arp timeout 14400
+ no mop enabled
+ no mop sysid
+ channel-group auto
+ no h323-gateway voip interface
+ ethernet oam max-rate 10
+ ethernet oam min-rate 1 
+ ethernet oam remote-loopback timeout 2
+ ethernet oam timeout 5 
+ hold-queue 375 in
+ hold-queue 40 out
+ ip igmp snooping tcn flood
+!
+interface GigabitEthernet3
+ switchport
+ switchport access vlan 1
+ switchport trunk encapsulation negotiate
+ switchport trunk allowed vlan all
+ no switchport autostate exclude
+ switchport private-vlan trunk encapsulation dot1q
+ switchport private-vlan trunk native vlan tag
+ no switchport nonegotiate
+ no switchport protected
+ no switchport block multicast
+ no switchport block unicast
+ no switchport vepa enabled
+ no switchport app-interface
+ switchport priority default 0
+ no switchport priority override
+ logging event link-status
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ negotiation auto
+ no medium p2p
+  cdp log mismatch duplex
+ cdp tlv location
+ cdp tlv server-location 
+ cdp tlv app
+ ipv6 mld snooping tcn flood
+ no ipv6 flowspec
+ mpls mtu 1500
+ snmp trap link-status
+ no flowspec group
+ arp arpa
+ arp timeout 14400
+ no mop enabled
+ no mop sysid
+ channel-group auto
+ no h323-gateway voip interface
+ ethernet oam max-rate 10
+ ethernet oam min-rate 1 
+ ethernet oam remote-loopback timeout 2
+ ethernet oam timeout 5 
+ hold-queue 375 in
+ hold-queue 40 out
+ ip igmp snooping tcn flood
+!
+interface Vlan1
+ no ip address
+ ip clear-dont-fragment
+ ip redirects
+ ip unreachables
+ ip proxy-arp
+ ip mtu 1500
+ ip pim join-prune-interval 60
+ ip pim dr-priority 1
+ ip pim query-interval 30
+ ip mfib forwarding input
+ ip mfib forwarding output
+ ip mfib cef input
+ ip mfib cef output
+ no ip flowspec
+ ip cef accounting non-recursive internal
+ ip load-sharing per-destination
+ ip route-cache cef
+ ip split-horizon
+ ip igmp robustness-variable 2
+ ip igmp last-member-query-interval 1000
+ ip igmp last-member-query-count 2
+ ip igmp query-max-response-time 10
+ ip igmp v3-query-max-response-time 10
+ ip igmp version 2
+ ip igmp query-interval 60
+ ip igmp tcn query count 2
+ ip igmp tcn query interval 10
+ logging event link-status
+ load-interval 300
+ carrier-delay 2
+ no shutdown
+ no medium p2p
+ ipv6 nd reachable-time 0
+ ipv6 nd ns-interval 0
+ ipv6 nd dad attempts 1
+ ipv6 nd dad loopback detect
+ ipv6 nd prefix framed-ipv6-prefix
+ ipv6 nd nud igp
+ no ipv6 nd ra solicited unicast
+ ipv6 nd ra lifetime 1800
+ ipv6 nd ra interval 200
+  ipv6 redirects
+  ipv6 unreachables
+ ipv6 mfib forwarding input
+ ipv6 mfib forwarding output
+ ipv6 mfib cef input
+ ipv6 mfib cef output
+ no ipv6 flowspec
+ mpls mtu 1500
+ snmp trap link-status
+ no flowspec group
+ autostate
+ arp arpa
+ arp timeout 14400
+ no mop enabled
+ no mop sysid
+ no h323-gateway voip interface
+ ethernet oam max-rate 10
+ ethernet oam min-rate 1 
+ ethernet oam remote-loopback timeout 2
+ ethernet oam timeout 5 
+ hold-queue 375 in
+ hold-queue 40 out
+!
+ip classless
+ip nsf-converge 10
+ip forward-protocol nd
+ip pim dm-fallback
+ip pim autorp
+ip pim bidir-offer-interval 100 msec
+ip pim bidir-offer-limit 3
+ip pim v1-rp-reachability
+ip pim log-neighbor-changes
+no ip finger 
+no ip tcp ecn
+no ip tcp selective-ack
+no ip tcp timestamp
+ip tcp delayed-ack
+ip tcp chunk-size 0
+ip tcp mss 0
+ip tcp keepalive retries 4
+ip tcp keepalive interval 60
+ip tcp window-size 4128
+ip tcp queuemax 20
+ip tcp synwait-time 30
+no ip tcp path-mtu-discovery
+no ip tcp async-mobility server
+ip tcp RST-count 10 RST-window 5000
+ip tcp intercept fast
+ip tcp intercept connection-timeout 86400
+ip tcp intercept finrst-timeout 5
+ip tcp intercept watch-timeout 30
+ip tcp intercept max-incomplete low 900
+ip tcp intercept max-incomplete high 1100
+ip tcp intercept one-minute low 900
+ip tcp intercept one-minute high 1100
+ip tcp intercept mode intercept
+ip tcp intercept drop-mode oldest
+ip telnet tos C0
+no ip telnet quiet
+no ip telnet hidden hostnames
+no ip telnet hidden addresses
+ip telnet comport enable
+ip telnet comport flow level 16
+ip telnet comport receive window 4128
+ip telnet comport disconnect delay 0
+ip http server
+ip http port 80
+no ip http upload overwrite
+ip http authentication local
+ip http secure-server
+ip http HSTS-Header
+ip http secure-port 443
+ip http secure-active-session-modules all
+ip http secure-ecdhe-curve secp256r1
+ip http max-connections 300
+ip http timeout-policy idle 180 life 180 requests 25 
+ip http timeout-policy linger 60
+ip http session-idle-timeout 600 
+ip http active-session-modules all
+ip http digest algorithm md5
+ip http client cache memory pool 100
+ip http client cache memory file 2
+ip http client cache ager interval 5
+ip http client connection timeout 10
+ip http client connection retry 1
+ip http client connection pipeline-length 5
+ip http client connection idle timeout 30
+ip http client source-interface GigabitEthernet1
+ip http client response timeout 30
+ip http path 
+!
+ip ftp passive
+no ip tftp claim-netascii
+ip tftp blocksize 512
+ip route static adjust-time 60
+ip route static inter-vrf
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet1 198.18.128.1
+ip rsvp authentication type md5
+ip rsvp authentication lifetime 00:30:00
+ip rsvp pq-profile 12288 592 110
+ip rsvp signalling initial-retransmit-delay 1000
+ip rsvp signalling refresh reduction ack-delay 250
+ip rsvp signalling refresh interval 30000
+ip rsvp signalling refresh misses 4
+no ip ssh bulk-mode
+ip ssh time-out 120
+ip ssh authentication-retries 3
+ip ssh window-size 8192
+ip ssh source-interface GigabitEthernet1
+ip ssh rsa keypair-name ssh-keys
+ip ssh break-string ~break
+ip ssh version 2
+ip ssh dh min size 2048
+no ip ssh rekey time
+no ip ssh rekey volume
+ip ssh server authenticate user publickey
+ip ssh server authenticate user keyboard
+ip ssh server authenticate user password
+no ip ssh server peruser session limit
+ip ssh server certificate profile
+ server
+  no ocsp-response include
+ user
+  no ocsp-response required
+!
+ip ssh server algorithm mac hmac-sha2-256-etm@openssh.com hmac-sha2-512-etm@openssh.com hmac-sha2-256 hmac-sha2-512 hmac-sha1
+ip ssh server algorithm encryption aes128-gcm aes256-gcm aes128-ctr aes192-ctr aes256-ctr
+ip ssh server algorithm kex ecdh-sha2-nistp256 ecdh-sha2-nistp384 ecdh-sha2-nistp521 diffie-hellman-group14-sha1
+ip ssh server algorithm hostkey x509v3-ssh-rsa rsa-sha2-512 rsa-sha2-256 ssh-rsa
+ip ssh server algorithm authentication publickey keyboard password
+ip ssh server algorithm publickey x509v3-ssh-rsa ssh-rsa ecdsa-sha2-nistp256 ecdsa-sha2-nistp384 ecdsa-sha2-nistp521 x509v3-ecdsa-sha2-nistp256 x509v3-ecdsa-sha2-nistp384 x509v3-ecdsa-sha2-nistp521 rsa-sha2-256 rsa-sha2-512
+ip ssh client algorithm mac hmac-sha2-256-etm@openssh.com hmac-sha2-512-etm@openssh.com hmac-sha2-256 hmac-sha2-512 hmac-sha1
+ip ssh client algorithm encryption aes128-gcm aes256-gcm aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm kex ecdh-sha2-nistp256 ecdh-sha2-nistp384 ecdh-sha2-nistp521 diffie-hellman-group14-sha1
+ip scp server enable
+!
+no ip access-list helper egress check
+!
+ ip prefix-list sequence-number
+no ip identd
+ip sla low-memory 956241231
+ip sla server twamp
+ port 862
+ timer inactivity 900
+ip rcmd domain-lookup
+ip access-list persistent
+service-routing capabilities-manager
+logging esm config
+logging history size 1
+logging history warnings
+no logging alarm
+logging trap informational
+logging delimiter tcp
+no logging origin-id
+logging facility local7
+logging source-interface GigabitEthernet1
+logging server-arp
+logging host 198.18.129.100 transport udp port 514
+ethernet cfm mep crosscheck start-delay 30
+terminal-queue entry-retry-interval 60
+!
+ ipv6 prefix-list sequence-number
+mop device-code cisco
+mop retransmit-timer 4
+mop retries 8
+no route-tag notation dotted-decimal
+snmp-server engineID local 80000009030000505697F1CB
+snmp-server view *ilmi system included
+snmp-server view *ilmi atmForumUni included
+snmp-server view v1default iso included
+snmp-server view v1default internet included
+snmp-server view v1default snmpUsmMIB excluded
+snmp-server view v1default snmpVacmMIB excluded
+snmp-server view v1default snmpCommunityMIB excluded
+snmp-server view *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF0F iso included
+snmp-server view *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF0F iso.2.840.10036 included
+snmp-server view *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF7F iso included
+snmp-server view *tv.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF.FFFFFFFF7F iso.2.840.10036 included
+snmp-server community publicv1default RO
+snmp-server community privatev1default RW
+snmp-server community SNMPROv1default RO
+snmp-server community SNMPRWv1default RW
+snmp-server priority normal
+no snmp-server trap link ietf
+no snmp-server trap link switchover
+snmp-server trap authentication vrf
+snmp-server trap authentication acl-failure
+snmp-server trap authentication unknown-context
+snmp-server trap retry 3
+snmp-server trap timeout 30
+snmp-server trap-source GigabitEthernet1
+snmp-server packetsize 1500
+snmp-server queue-length 10
+snmp-server chassis-id 9YLDKDUP0SZ
+snmp-server enable logging setop
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps vrrp
+snmp-server enable traps pfr
+snmp-server enable traps flowmon
+snmp-server enable traps entity-perf throughput-notif
+snmp-server enable traps wiredguest wired_guest
+snmp-server enable traps wireless bsnMobileStation bsnAutoRF bsnGeneral rogue MESH wireless_mobility RRM SI tunnel
+snmp-server enable traps wireless AP
+snmp-server enable traps call-home message-send-fail server-fail
+snmp-server enable traps tty
+snmp-server enable traps casa
+snmp-server enable traps ospf state-change if-state-change neighbor-state-change virtif-state-change virtneighbor-state-change
+snmp-server enable traps ospf errors authentication-failure bad-packet config-error virt-authentication-failure virt-bad-packet virt-config-error
+snmp-server enable traps ospf retransmit packets virt-packets
+snmp-server enable traps ospf lsa lsa-originate lsa-maxage
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors config-error
+snmp-server enable traps ospf cisco-specific errors virt-config-error
+snmp-server enable traps ospf cisco-specific errors shamlink config authentication bad-packet
+snmp-server enable traps ospf cisco-specific retransmit packets virt-packets shamlink
+snmp-server enable traps ospf cisco-specific lsa lsa-originate lsa-maxage
+snmp-server enable traps ospf rate-limit 10 7
+snmp-server enable traps eigrp
+snmp-server enable traps adslline
+snmp-server enable traps vdsl2line
+snmp-server enable traps license
+snmp-server enable traps smart-license
+snmp-server enable traps ethernet evc status create delete
+snmp-server enable traps ether-oam
+snmp-server enable traps ethernet cfm cc mep-up mep-down cross-connect loop config
+snmp-server enable traps ethernet cfm crosscheck mep-missing mep-unknown service-up
+snmp-server enable traps auth-framework sec-violation
+snmp-server enable traps entity-qfp mem-res-thresh throughput-notif
+snmp-server enable traps entity-state
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps bgp cbgp2
+snmp-server enable traps dlsw
+snmp-server enable traps entity-sensor
+snmp-server enable traps resource-policy
+snmp-server enable traps flash insertion removal lowspace
+snmp-server enable traps nhrp nhs up
+snmp-server enable traps nhrp nhs down
+snmp-server enable traps nhrp nhc up
+snmp-server enable traps nhrp nhc down
+snmp-server enable traps nhrp nhp up
+snmp-server enable traps nhrp nhp down
+snmp-server enable traps nhrp quota-exceeded
+snmp-server enable traps ipsla
+snmp-server enable traps cnpd
+snmp-server enable traps entity-diag boot-up-fail hm-test-recover hm-thresh-reached scheduled-test-fail
+snmp-server enable traps cef resource-failure peer-state-change peer-fib-state-change inconsistency
+snmp-server enable traps memory bufferpeak
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps config-ctid
+snmp-server enable traps dhcp
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps event-manager
+snmp-server enable traps frame-relay
+snmp-server enable traps frame-relay subif interval 10 count 10
+snmp-server enable traps pimstdmib neighbor-loss invalid-register invalid-join-prune rp-mapping-change interface-election
+snmp-server enable traps ipmulticast
+snmp-server enable traps ip local pool
+snmp-server enable traps msdp
+snmp-server enable traps mvpn
+snmp-server enable traps ospfv3 state-change if-state-change neighbor-restart-helper-status-change neighbor-state-change nssa-translator-status-change restart-status-change virtif-state-change virtneighbor-state-change virtneighbor-restart-helper-status-change
+snmp-server enable traps ospfv3 errors bad-packet config-error virt-bad-packet virt-config-error
+snmp-server enable traps ospfv3 rate-limit 10 7
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps pppoe
+snmp-server enable traps cpu threshold
+snmp-server enable traps rsvp
+snmp-server enable traps l2tun session
+snmp-server enable traps l2tun pseudowire status
+snmp-server enable traps aaa_server
+snmp-server enable traps atm subif
+snmp-server enable traps pki
+snmp-server enable traps ike policy add
+snmp-server enable traps ike policy delete
+snmp-server enable traps ike tunnel start
+snmp-server enable traps ike tunnel stop
+snmp-server enable traps ipsec cryptomap add
+snmp-server enable traps ipsec cryptomap delete
+snmp-server enable traps ipsec cryptomap attach
+snmp-server enable traps ipsec cryptomap detach
+snmp-server enable traps ipsec tunnel start
+snmp-server enable traps ipsec tunnel stop
+snmp-server enable traps ipsec too-many-sas
+snmp-server enable traps gdoi gm-start-registration
+snmp-server enable traps gdoi gm-registration-complete
+snmp-server enable traps gdoi gm-re-register
+snmp-server enable traps gdoi gm-rekey-rcvd
+snmp-server enable traps gdoi gm-rekey-fail
+snmp-server enable traps gdoi ks-rekey-pushed
+snmp-server enable traps gdoi gm-incomplete-cfg
+snmp-server enable traps gdoi ks-no-rsa-keys
+snmp-server enable traps gdoi ks-new-registration
+snmp-server enable traps gdoi ks-reg-complete
+snmp-server enable traps gdoi ks-role-change
+snmp-server enable traps gdoi ks-gm-deleted
+snmp-server enable traps gdoi ks-peer-reachable
+snmp-server enable traps gdoi ks-peer-unreachable
+snmp-server enable traps dsp card-status
+snmp-server enable traps dsp oper-state
+snmp-server enable traps dsp video-usage
+snmp-server enable traps dsp video-out-of-resource
+snmp-server enable traps frame-relay multilink bundle-mismatch
+snmp-server enable traps syslog
+snmp-server enable traps mpls rfc ldp
+snmp-server enable traps mpls ldp
+snmp-server enable traps mpls rfc traffic-eng
+snmp-server enable traps mpls traffic-eng
+snmp-server enable traps mpls fast-reroute protected
+snmp-server enable traps bfd
+snmp-server enable traps otn
+snmp-server enable traps pw vc
+snmp-server enable traps lisp
+snmp-server enable traps dial
+snmp-server enable traps sbc adj-status
+snmp-server enable traps sbc blacklist
+snmp-server enable traps sbc congestion-alarm
+snmp-server enable traps sbc h248-ctrlr-status
+snmp-server enable traps sbc media-source
+snmp-server enable traps sbc radius-conn-status
+snmp-server enable traps sbc sla-violation
+snmp-server enable traps sbc sla-violation-rev1
+snmp-server enable traps sbc svc-state
+snmp-server enable traps sbc qos-statistics
+snmp-server enable traps ethernet cfm alarm
+snmp-server enable traps vlan-membership
+snmp-server enable traps alarms informational
+snmp-server enable traps rf
+snmp-server enable traps transceiver all
+snmp-server enable traps bulkstat collection transfer
+snmp-server enable traps vrfmib vrf-up vrf-down vnet-trunk-up vnet-trunk-down
+snmp-server enable traps mpls vpn
+snmp-server enable traps mpls rfc vpn
+snmp-server enable traps voice
+snmp-server host 198.18.129.100 traps version 2c SNMPRW udp-port 162 
+snmp-server host 198.18.129.100 traps version 2c private udp-port 162 
+snmp-server host 198.18.129.100 traps version 2c public udp-port 162 
+snmp-server inform retries 3 timeout 15 pending 25
+snmp-server subagent datastage timeout 5
+snmp-server subagent fetch count 50
+snmp-server subagent cache 
+snmp-server subagent cache timeout 60
+no snmp-server subagent cache-stats 
+snmp-server subagent enable 
+no snmp-server dbal cache 
+snmp monitor response 10000
+no snmp mib flash cache interval 2
+no snmp mib nhrp
+snmp mib event sample minimum 60
+snmp mib event sample instance maximum 0
+snmp mib expression delta minimum 1
+snmp mib expression delta wildcard maximum 0
+snmp mib pimstdmib notification-period neighbor-loss 0
+snmp mib pimstdmib notification-period invalid-register 65535
+snmp mib pimstdmib notification-period invalid-join-prune 65535
+snmp mib pimstdmib notification-period rp-mapping-change 65535
+snmp mib pimstdmib notification-period interface-election 65535
+snmp mib flowmon alarmhistorysize 500
+snmp mib notification-log globalsize 500
+snmp mib notification-log globalageout 15
+snmp mib community-map SNMPRO engineid 80000009030000505697F1CB
+snmp mib community-map SNMPRW engineid 80000009030000505697F1CB
+snmp mib community-map private engineid 80000009030000505697F1CB
+snmp mib community-map public engineid 80000009030000505697F1CB
+!
+tacacs-server cache expiry 24 enforce hours
+!
+radius-server attribute 77 include-in-acct-req
+radius-server attribute 77 include-in-access-req
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 6 support-multiple
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+radius-server attribute 11 default direction out
+radius-server attribute nas-port format a
+radius-server dead-criteria time 5 tries 3
+radius-server cache expiry 24 enforce hours
+radius-server transaction max-tries 8
+radius-server retransmit 3
+radius-server timeout 5
+radius-server deadtime 3
+radius-server ipc-limit in 10
+radius-server ipc-limit done 10
+radius-server vsa send accounting
+radius-server vsa send authentication
+!
+radius server dnac-radius_198.18.133.27
+ address ipv4 198.18.133.27 auth-port 1812 acct-port 1813
+ timeout 4
+ retransmit 3
+ pac key 7 123A540411045D56797F71
+!
+ipv6 access-list log-update threshold 2147483647
+!
+control-plane
+!
+call rsvp-sync resv-timer 10
+call rsvp-sync
+call treatment action Reject
+call treatment cause-code no-resource
+call treatment isdn-reject 41
+no call treatment on
+call threshold poll-interval cpu-avg 60
+call threshold poll-interval memory 5
+!
+sccp ip precedence 5
+!
+!
+!
+dial-peer hunt 0
+dial-peer terminator #
+no dial-peer inbound selection sip-trunk
+no dial-peer inbound selection creation-order
+dial-peer outbound status-check pots
+no dial-peer no-match isdn disconnect-cause
+dial-peer search type data voice
+alias atm-vc-config vbr vbr-nrt
+alias exec h help
+alias exec lo logout
+alias exec p ping
+alias exec r resume
+alias exec s show
+alias exec u undebug
+alias exec un undebug
+alias exec w where
+no configuration mode exclusive
+parser cache
+parser config partition
+parser command serializer
+parser maximum utilization 100
+parser maximum latency 40
+default-value exec-character-bits 7
+default-value special-character-bits 7
+default-value data-character-bits 8
+line auto-consolidation
+!
+line con 0
+ motd-banner
+ exec-banner
+ exec-timeout 0 0
+ timeout login response 30
+ privilege level 1
+ flush-at-activation
+ activation-character 13
+ logout-warning 20
+ absolute-timeout 0
+ data-character-bits 8
+ exec-character-bits 7
+ special-character-bits 7
+ domain-lookup
+ exec
+ length 24
+ width 80
+ history size 10
+ history
+  editing
+ monitor
+ escape-character soft DEFAULT
+ escape-character DEFAULT
+ autohangup session-timeout
+ databits 8
+ stopbits 1
+ start-character 17
+ stop-character 19
+ speed 9600
+line vty 0 4
+ motd-banner
+ exec-banner
+ exec-timeout 10 0
+ timeout login response 30
+ privilege level 1
+ flush-at-activation
+ activation-character 13
+ logout-warning 20
+ absolute-timeout 0
+ authorization exec VTY_author
+ login authentication VTY_authen
+ data-character-bits 8
+ exec-character-bits 7
+ special-character-bits 7
+ domain-lookup
+ exec
+ length 0
+ width 80
+ history size 10
+ history
+  editing
+ monitor
+ transport input all
+ escape-character soft DEFAULT
+ escape-character DEFAULT
+ autohangup session-timeout
+ start-character 17
+ stop-character 19
+line vty 5 97
+ motd-banner
+ exec-banner
+ exec-timeout 10 0
+ timeout login response 30
+ privilege level 1
+ flush-at-activation
+ activation-character 13
+ logout-warning 20
+ absolute-timeout 0
+ authorization exec VTY_author
+ login authentication VTY_authen
+ data-character-bits 8
+ exec-character-bits 7
+ special-character-bits 7
+ domain-lookup
+ exec
+ length 24
+ width 80
+ history size 10
+ history
+  editing
+ monitor
+ transport input all
+ escape-character soft DEFAULT
+ escape-character DEFAULT
+ autohangup session-timeout
+ start-character 17
+ stop-character 19
+!
+exception data-corruption buffer truncate
+exception data-corruption buffer log
+exception crashinfo file bootflash:C9800-WLC_crashinfo_RP_00_00
+exception crashinfo buffersize 32
+exception crashinfo maximum files 1
+no exception crashinfo dump garbage-detector
+no transport type console 0 input
+no transport type persistent telnet input 
+no transport type persistent ssh input 
+no transport type persistent webui input 
+monitor event-trace stacktrace
+no monitor event-trace sequence-number
+monitor event-trace timestamps datetime msec
+monitor event-trace eigrp perf-events rate-limiting 1
+no monitor event-trace voip ccsip msg
+no monitor event-trace voip ccsip fsm
+no monitor event-trace voip ccsip api
+no monitor event-trace voip ccsip misc
+no monitor event-trace voip ccsip global
+monitor event-trace voip ccsip limit connections 1000
+monitor event-trace voip ccsip dump none
+no monitor event-trace voip ccsip dump-file
+monitor event-trace voip ccsip dump-folder size 10 time 10
+monitor event-trace voip ccsip max-dump-limit 100
+no monitor event-trace voip ccsip stacktrace
+scheduler process-watchdog normal
+call-home
+ alert-group configuration
+ alert-group crash
+ alert-group inventory
+ alert-group snapshot
+ alert-group syslog
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ rate-limit 20
+ aaa-authorization username "callhome"
+ no aaa-authorization
+ alert-group-config snapshot
+ data-privacy level normal
+ no http resolve-hostname ipv4-first
+ http secure server-identity-check
+ syslog-throttling
+ profile "CiscoTAC-1"
+  active
+  no anonymous-reporting-only
+  reporting smart-call-home-data
+  reporting smart-licensing-data
+  destination preferred-msg-format xml
+  destination message-size-limit 3145728
+  destination transport-method http
+  destination address email callhome@cisco.com 
+  destination address http https://tools.cisco.com/its/service/oddce/services/DDCEService 
+  subscribe-to-alert-group crash
+  subscribe-to-alert-group inventory
+  subscribe-to-alert-group syslog severity major pattern .*
+  subscribe-to-alert-group configuration periodic monthly 8 12:54
+  subscribe-to-alert-group inventory periodic monthly 8 12:39
+ diagnostic-signature
+  active
+  profile "CiscoTAC-1"
+ntp allow mode control 3
+ntp leap-handle
+ntp mindistance 1
+ntp maxdistance 8
+ntp server 198.18.128.1 maxpoll 10 minpoll 6 version 4 burst iburst
+ntp server 172.16.10.103 maxpoll 10 minpoll 6 version 4 burst iburst
+device-tracking binding reachable-lifetime 300 stale-lifetime 86400 down-lifetime 86400
+no device-tracking binding logging
+no device-tracking binding max-entries
+!
+cns id hostname 
+cns id hostname event
+cns id hostname image
+cns image retry 60
+netconf max-sessions 4
+netconf lock-time 10
+netconf max-message 0
+wsma id hostname
+!
+!
+!
+!
+xmpp id hostname
+management gateway-failover enable
+management gateway-failover interval 8
+bulkstat resource limit memory 95
+event manager scheduler script thread class default number 1
+event manager scheduler applet thread class default number 5
+event manager scheduler call-home thread class default number 32
+event manager scheduler shell thread class default number 1
+event manager scheduler shell thread class Z number 1
+event manager scheduler onep thread class default number 5
+event manager scheduler portal thread class default number 5
+!
+event manager history size events 10
+event manager history size traps 10
+event manager detector rpc max-sessions 4
+event manager detector routing bootup-delay 0
+telemetry ietf subscription 1011
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/wlan_config
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1012
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/wlanpolicies
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1013
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/wlanpolicies;policy_profile_name=temp_policy_profile/atfpolicymap
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1014
+ encoding encode-tdl
+ filter nested-uri /services;serviceName=ewlc/policylist
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1016
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/site_tag_config
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1051
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/wlan_config
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1052
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/wlanpolicies
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1053
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/wlanpolicies;policy_profile_name=temp_policy_profile/atfpolicymap
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1054
+ encoding encode-tdl
+ filter nested-uri /services;serviceName=ewlc/policylist
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 1056
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/site_tag_config
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2011
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlcevent/wsaapevent
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2111
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/ethernet_mac_wtp_mac_map
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2112
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/oper_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2113
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/capwap_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2114
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/radio_oper_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2115
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/capwap_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2116
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/spectrum_aq_table
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2120
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/ethernet_if_stats
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2121
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/rrmAPautoRfdot11Data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2122
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/rrm_measurement
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2125
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper_emul/emltdApRf
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 17000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2126
+ encoding encode-tdl
+ filter tdl-transform dfsRadarCounters
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2154
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/radio_oper_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2155
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/ewlcRadioOperBand
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2156
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/ewlcRadioOperBand
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2157
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/apdot11SpectrumData
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2158
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/apdot11SpectrumData
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2159
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/cdp_cache_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 2160
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/cdp_cache_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3011
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/common_oper_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3012
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/dot11_oper_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3013
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/smMainData
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3014
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/lisp_agent_client_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3016
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/mobility_oper_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3017
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/sisf_db_mac
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3111
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/traffic_stats
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 9000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3113
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/client_wsa_info
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3114
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/location_rssi_measurements
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3115
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlcevent/wsaclientscanreportevent
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3211
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlcevent/wsaclientevent
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3212
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/dc_info
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3213
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/dc_info
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3214
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/policy_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3215
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/policy_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 360000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 3216
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/traffic_distribution_airtime_latency
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 4321
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/aaaServersStat
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 4322
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper_emul/emltd_sisf_dhcpv4_relay_stats
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5011
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_emul_oper/device_hardware;singleton_id=0?device_system_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5012
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_oper/ha_infra
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5013
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_emul_oper/device_hardware;singleton_id=0/device_inventory
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5015
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_emul_oper/smart_license_state;singleton_id=0/smart_license_usage
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5016
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_oper/ha_infra
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 180000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5017
+ encoding encode-tdl
+ filter nested-uri /services;serviceName=sman_oper/control_process;fru=BINOS_FRU_RP;slotnum=0;baynum=0;chassisnum=1?plat_core_stats
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5018
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_emul_oper/entity_information
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5019
+ encoding encode-tdl
+ filter nested-uri /services;serviceName=ios_oper/platform_component;cname=\"Slot\"?platform_properties
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5020
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_oper/platform_component
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5112
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ios_emul_oper/interface
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5115
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=sman_oper/control_process
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5117
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper_emul/ewlcEmltdClientGlobalStatsData;singleton_id=0
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5118
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper_emul/emltd_join_count_stat;singleton_id=0
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5119
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/lisp_agent_ms_msg_stats_data
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 5120
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc/dot11
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy on-change
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 6001
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/radioWsaInfo
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 900000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 6002
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/radio_reset_stats
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 1800000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 6004
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/rrmRadSlot
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 1800000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 6005
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/radio_oper_stats
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 6007
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/rrmCoverage
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 7000
+ encoding encode-tdl
+ filter tdl-uri /services;serviceName=ewlc_oper/icapApSrvcStats
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 30000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry ietf subscription 8882
+ encoding encode-tdl
+ filter tdl-transform trustSecCounterDelta
+ receiver-type protocol
+ source-address 198.18.134.100
+ stream native
+ update-policy periodic 90000
+ receiver name DNAC_ASSURANCE_RECEIVER
+telemetry receiver protocol DNAC_ASSURANCE_RECEIVER
+ host ip-address 198.18.129.100 25103
+ protocol tls-native profile sdn-network-infra-iwan
+telemetry transform dfsRadarCounters
+ input table apdot11RadarData
+  field wtp_mac
+  field radio_slot_id
+  field dfs_cisco_ip_cnt
+  field dfs_triggered_cnt
+  field dfs_serving_rad_cnt
+  field dfs_stats_last_updated
+  join-key radio_slot_key_t
+  logical-op and
+  type mandatory
+  uri /services;serviceName=ewlc_oper/apdot11RadarData
+ operation 1
+  filter 1
+   event on-change
+   field apdot11RadarData.dfs_stats_last_updated
+  output-field 1
+   field apdot11RadarData.dfs_cisco_ip_cnt
+  output-field 2
+   field apdot11RadarData.dfs_triggered_cnt
+  output-field 3
+   field apdot11RadarData.dfs_serving_rad_cnt
+  output-field 4
+   field apdot11RadarData.wtp_mac
+  output-field 5
+   field apdot11RadarData.radio_slot_id
+  output-field 6
+   field apdot11RadarData.dfs_stats_last_updated
+ specified
+telemetry transform trustSecCounterDelta
+ input table cts_rolebased_policy
+  field dst_sgt
+  field src_sgt
+  field sgacl_name
+  field monitor_mode
+  field num_of_sgacl
+  field policy_life_time
+  field total_deny_count
+  field last_updated_time
+  field total_permit_count
+  join-key cts_role_based_policy_key
+  logical-op and
+  type mandatory
+  uri /services;serviceName=ios_emul_oper/cts_rolebased_policy
+ operation 1
+  output-field 1
+   field cts_rolebased_policy.src_sgt
+  output-field 2
+   field cts_rolebased_policy.dst_sgt
+  output-field 3
+   field cts_rolebased_policy.total_permit_count
+   output-op type delta
+  output-field 4
+   field cts_rolebased_policy.total_deny_count
+   output-op type delta
+  output-field 5
+   field cts_rolebased_policy.sgacl_name
+  output-field 6
+   field cts_rolebased_policy.monitor_mode
+  output-field 7
+   field cts_rolebased_policy.num_of_sgacl
+  output-field 8
+   field cts_rolebased_policy.policy_life_time
+  output-field 9
+   field cts_rolebased_policy.last_updated_time
+ specified
+wireless mobility group keepalive count 3
+wireless mobility group keepalive interval 10
+wireless mobility group name default
+wireless mobility dscp 48
+wireless mobility mac-address 0000.0000.0000
+wireless aaa policy default-aaa-policy
+ no nas-id option1 ap-eth-mac
+ no nas-id option1 ap-ip
+ no nas-id option1 ap-location
+ no nas-id option1 ap-mac
+ no nas-id option1 ap-name
+ no nas-id option1 ap-policy-tag
+ no nas-id option1 ap-site-tag
+ no nas-id option1 ssid
+ no nas-id option1 sys-ip
+ no nas-id option1 sys-mac
+ no nas-id option1 sys-name
+ nas-id option1 sys-name
+ no nas-id option2 ap-eth-mac
+ no nas-id option2 ap-ip
+ no nas-id option2 ap-location
+ no nas-id option2 ap-mac
+ no nas-id option2 ap-name
+ no nas-id option2 ap-policy-tag
+ no nas-id option2 ap-site-tag
+ no nas-id option2 ssid
+ no nas-id option2 sys-ip
+ no nas-id option2 sys-mac
+ no nas-id option2 sys-name
+ no nas-id option3 ap-eth-mac
+ no nas-id option3 ap-ip
+ no nas-id option3 ap-location
+ no nas-id option3 ap-mac
+ no nas-id option3 ap-name
+ no nas-id option3 ap-policy-tag
+ no nas-id option3 ap-site-tag
+ no nas-id option3 ssid
+ no nas-id option3 sys-ip
+ no nas-id option3 sys-mac
+ no nas-id option3 sys-name
+wireless cts-sxp profile default-sxp-profile
+ no cts sxp enable
+ cts sxp listener hold-time 90 120
+ cts sxp reconciliation period 120
+ cts sxp retry period 120
+ cts sxp speaker hold_time 120
+wireless ipv6 client
+no wireless ipv6 nd na-forward
+wireless ipv6 nd ns-forward
+wireless management trustpoint C9800-WLC_WLC_TP
+wireless management interface GigabitEthernet1
+ capwap-discovery private
+ no capwap-discovery public
+ public-ip 0.0.0.0
+wireless mesh alarm association count 10
+wireless mesh alarm high-snr 60
+wireless mesh alarm low-snr 12
+wireless mesh alarm max-children map 10
+wireless mesh alarm max-children rap 20
+wireless mesh alarm max-hop 4
+wireless mesh alarm parent-change count 3
+wireless mesh security psk provisioning inuse 1
+wireless profile airtime-fairness default-atf-policy 0
+ no client-sharing
+ weight 10
+wireless profile flex FP_RTP_Build_daa75
+ no arp-caching
+ no cts inline-tagging
+ cts profile default-sxp-profile
+ description "Flex Profile FP_RTP_Build_daa75"
+ no ip overlap
+ ip http client proxy 0.0.0.0 8080
+ no local-auth ap eap-fast default
+ no local-auth ap leap
+ no local-auth ap peap
+ local-auth ap radius
+ no local-auth ap tls
+ local-auth radius-server-group default
+ native-vlan-id 119
+ predownload
+ vlan-name Clients
+  vlan-id 119
+wireless profile flex default-flex-profile
+ arp-caching
+ no cts inline-tagging
+ cts profile default-sxp-profile
+ description "default flex profile"
+ no ip overlap
+ ip http client proxy 0.0.0.0 0
+ no local-auth ap leap
+ no local-auth ap peap
+ local-auth ap radius
+ no local-auth ap tls
+ native-vlan-id 1
+ predownload
+wireless profile mesh default-mesh-profile
+ backhaul rate dot11 24ghz auto
+ backhaul rate dot11 5ghz auto
+ convergence standard
+ description "default mesh profile"
+ method authentication dnac-mesh-list
+ method authorization dnac-mesh-list
+ multicast in-out
+ range 12000
+ security eap
+wireless profile radio default-radio-profile
+ description "Preconfigured default radio profile"
+wireless profile policy default-policy-profile
+ no aaa-override
+ no aaa-override vlan fallback
+ aaa-policy default-aaa-policy
+ autoqos mode voice
+ no call-snoop
+ description "default policy profile"
+ no et-analytics enable
+ exclusionlist timeout 60
+ flex umbrella dhcp-dns-option
+ flex umbrella mode ignore
+ no guest-lan enable-session-timeout
+ idle-threshold 0
+ idle-timeout 300
+ ip mac-binding
+ no ipv4 arp-proxy
+ no ipv4 dhcp opt82
+ no ipv4 dhcp opt82 ascii
+ no ipv4 dhcp opt82 format ap_ethmac
+ no ipv4 dhcp opt82 format ap_location
+ no ipv4 dhcp opt82 format apmac
+ no ipv4 dhcp opt82 format apname
+ no ipv4 dhcp opt82 format policy_tag
+ no ipv4 dhcp opt82 format ssid
+ no ipv4 dhcp opt82 format vlan_id
+ no ipv4 dhcp opt82 rid
+ no ipv4 dhcp required
+ ipv4 dhcp server 0.0.0.0
+ no ipv6 nd proxy
+ no link-local-bridging
+ mdns-sd service-policy default-mdns-service-policy
+ no multicast filter
+ no passive-client
+ qbss-load
+ service-policy input platinum-up
+ service-policy output platinum
+ session-timeout 1800
+ no static-ip-mobility
+ vlan VLAN0001
+ no wgb broadcast-tagging
+ no wgb vlan
+ no shutdown
+wireless profile policy Enterprise_Global_F_6e3e06f9
+ aaa-override
+ no aaa-override vlan fallback
+ aaa-policy default-aaa-policy
+ accounting-list dnac-cts-Enterprise-845b8dab
+ no call-snoop
+ no central dhcp
+ no central switching
+ description Enterprise_Global_F_6e3e06f9
+ dhcp-tlv-caching
+ no et-analytics enable
+ exclusionlist timeout 180
+ flex umbrella dhcp-dns-option
+ flex umbrella mode ignore
+ no guest-lan enable-session-timeout
+ http-tlv-caching
+ idle-threshold 0
+ idle-timeout 300
+ ip mac-binding
+ no ipv4 arp-proxy
+ no ipv4 dhcp opt82
+ no ipv4 dhcp opt82 ascii
+ no ipv4 dhcp opt82 format ap_ethmac
+ no ipv4 dhcp opt82 format ap_location
+ no ipv4 dhcp opt82 format apmac
+ no ipv4 dhcp opt82 format apname
+ no ipv4 dhcp opt82 format policy_tag
+ no ipv4 dhcp opt82 format ssid
+ no ipv4 dhcp opt82 format vlan_id
+ no ipv4 dhcp opt82 rid
+ no ipv4 dhcp required
+ ipv4 dhcp server 0.0.0.0
+ no ipv6 nd proxy
+ no link-local-bridging
+ mdns-sd service-policy default-mdns-service-policy
+ no multicast filter
+ no passive-client
+ qbss-load
+ service-policy input platinum-up
+ service-policy output platinum
+ session-timeout 1800
+ no static-ip-mobility
+ vlan 1
+ no wgb broadcast-tagging
+ no wgb vlan
+wireless profile policy Guest-jlaf_Global_F_3ff65234
+ aaa-override
+ no aaa-override vlan fallback
+ aaa-policy default-aaa-policy
+ accounting-list dnac-cts-Guest-jlaf-7ba6c0ec
+ no call-snoop
+ no central dhcp
+ no central switching
+ description Guest-jlaf_Global_F_3ff65234
+ dhcp-tlv-caching
+ no et-analytics enable
+ exclusionlist timeout 180
+ flex umbrella dhcp-dns-option
+ flex umbrella mode ignore
+ no guest-lan enable-session-timeout
+ http-tlv-caching
+ idle-threshold 0
+ idle-timeout 300
+ ip mac-binding
+ no ipv4 arp-proxy
+ no ipv4 dhcp opt82
+ no ipv4 dhcp opt82 ascii
+ no ipv4 dhcp opt82 format ap_ethmac
+ no ipv4 dhcp opt82 format ap_location
+ no ipv4 dhcp opt82 format apmac
+ no ipv4 dhcp opt82 format apname
+ no ipv4 dhcp opt82 format policy_tag
+ no ipv4 dhcp opt82 format ssid
+ no ipv4 dhcp opt82 format vlan_id
+ no ipv4 dhcp opt82 rid
+ no ipv4 dhcp required
+ ipv4 dhcp server 0.0.0.0
+ no ipv6 nd proxy
+ no link-local-bridging
+ mdns-sd service-policy default-mdns-service-policy
+ no multicast filter
+ nac
+ no passive-client
+ qbss-load
+ service-policy input silver-up
+ service-policy output silver
+ session-timeout 1800
+ no static-ip-mobility
+ vlan 1
+ no wgb broadcast-tagging
+ no wgb vlan
+wireless profile policy test-yijxi_Global_NF_6d2f2709
+ aaa-override
+ no aaa-override vlan fallback
+ aaa-policy default-aaa-policy
+ autoqos mode fastlane
+ no call-snoop
+ description test-yijxi_Global_NF_6d2f2709
+ dhcp-tlv-caching
+ no et-analytics enable
+ exclusionlist timeout 180
+ flex umbrella dhcp-dns-option
+ flex umbrella mode ignore
+ no guest-lan enable-session-timeout
+ http-tlv-caching
+ idle-threshold 0
+ idle-timeout 300
+ ip mac-binding
+ ip nbar protocol-discovery
+ no ipv4 arp-proxy
+ no ipv4 dhcp opt82
+ no ipv4 dhcp opt82 ascii
+ no ipv4 dhcp opt82 format ap_ethmac
+ no ipv4 dhcp opt82 format ap_location
+ no ipv4 dhcp opt82 format apmac
+ no ipv4 dhcp opt82 format apname
+ no ipv4 dhcp opt82 format policy_tag
+ no ipv4 dhcp opt82 format ssid
+ no ipv4 dhcp opt82 format vlan_id
+ no ipv4 dhcp opt82 rid
+ no ipv4 dhcp required
+ ipv4 dhcp server 0.0.0.0
+ ipv4 flow monitor avc_ipv4_assurance input
+ ipv4 flow monitor avc_ipv4_assurance_rtp input
+ ipv4 flow monitor avc_ipv4_assurance output
+ ipv4 flow monitor avc_ipv4_assurance_rtp output
+ ipv6 flow monitor avc_ipv6_assurance input
+ ipv6 flow monitor avc_ipv6_assurance_rtp input
+ ipv6 flow monitor avc_ipv6_assurance output
+ ipv6 flow monitor avc_ipv6_assurance_rtp output
+ no ipv6 nd proxy
+ no link-local-bridging
+ mdns-sd service-policy default-mdns-service-policy
+ no multicast filter
+ no nac
+ no nac ise
+ no passive-client
+ qbss-load
+ service-policy input test-yijxi_DNA-MARKING_078e26e9
+ service-policy output test-yijxi_DNA-MARKING_078e26e9
+ session-timeout 1800
+ no static-ip-mobility
+ vlan 1
+ no wgb broadcast-tagging
+ no wgb vlan
+ no shutdown
+wireless rfid
+wireless rfid timeout 1200
+wireless tag site default-site-tag
+ ap-profile default-ap-profile
+ description "default site tag"
+ fabric ap-arp-caching
+ no fabric ap-dhcp-broadcast
+ fabric ap-mcast-ipv4 232.255.255.1
+ flex-profile default-flex-profile
+ local-site
+wireless tag site ST_RTP_Site1_daa75_0
+ ap-profile default-ap-profile
+ description "Site Tag ST_RTP_Site1_daa75_0"
+ fabric ap-arp-caching
+ no fabric ap-dhcp-broadcast
+ fabric ap-mcast-ipv4 232.255.255.1
+ flex-profile default-flex-profile
+ local-site
+wireless tag site ST_RTP_Building_28e93_0
+ ap-profile default-ap-profile
+ description "Site Tag ST_RTP_Building_28e93_0"
+ fabric ap-arp-caching
+ no fabric ap-dhcp-broadcast
+ fabric ap-mcast-ipv4 232.255.255.1
+ flex-profile default-flex-profile
+ local-site
+wireless tag site ST_RTP_Building_daa75_0
+ ap-profile default-ap-profile
+ description "Site Tag ST_RTP_Building_daa75_0"
+ fabric ap-arp-caching
+ no fabric ap-dhcp-broadcast
+ fabric ap-mcast-ipv4 232.255.255.1
+ flex-profile FP_RTP_Build_daa75
+ no local-site
+wireless tag site ST_RTP_Building_daa75_1
+ ap-profile default-ap-profile
+ description "Site Tag ST_RTP_Building_daa75_1"
+ fabric ap-arp-caching
+ no fabric ap-dhcp-broadcast
+ fabric ap-mcast-ipv4 232.255.255.1
+ flex-profile default-flex-profile
+ local-site
+wireless tag site default-site-tag-fabric
+ ap-profile default-ap-profile
+ description "Site Tag default-site-tag-fabric"
+ fabric ap-arp-caching
+ no fabric ap-dhcp-broadcast
+ fabric ap-mcast-ipv4 232.255.255.1
+ flex-profile default-flex-profile
+ local-site
+wireless tag policy default-policy-tag
+ description "default policy-tag"
+wireless tag policy PT_RTP_Build_Floor1_5a1d4
+ description "PolicyTagName PT_RTP_Build_Floor1_5a1d4"
+ wlan Enterprise_Global_F_6e3e06f9 policy Enterprise_Global_F_6e3e06f9
+ wlan Guest-jlaf_Global_F_3ff65234 policy Guest-jlaf_Global_F_3ff65234
+wireless tag policy PT_RTP_Build_Floor1_cae05
+ description "PolicyTagName PT_RTP_Build_Floor1_cae05"
+ wlan test-yijxi_Global_NF_6d2f2709 policy test-yijxi_Global_NF_6d2f2709
+wireless tag policy PT_RTP_Site1_Floor1_cae05
+ description "PolicyTagName PT_RTP_Site1_Floor1_cae05"
+ wlan GuestNet1_Global_F_41d982bd policy GuestNet1_Global_F_41d982bd
+ wlan EntWireles_Global_F_862b6f5f policy EntWireles_Global_F_862b6f5f
+wireless tag rf LOW
+ 24ghz-rf-policy Low_Client_Density_rf_24gh
+ 5ghz-rf-policy Low_Client_Density_rf_5gh
+wireless tag rf default-rf-tag
+ 24ghz-rf-policy default_rf_24gh
+ 5ghz-rf-policy default_rf_5gh
+ description "default RF tag"
+wireless wps rogue adhoc
+wireless wps rogue ap aaa polling-interval 3600
+wireless wps rogue ap init-timer 180
+wireless wps rogue ap notify-min-rssi -128
+wireless wps rogue ap notify-rssi-deviation 0
+wireless wps rogue ap rldp retries 1
+wireless wps rogue ap timeout 1200
+wireless wps rogue auto-contain level 1
+wireless wps rogue client client-threshold 0
+wireless wps rogue client notify-min-rssi -128
+wireless wps rogue client notify-rssi-deviation 0
+wireless wps rogue network-assurance enable
+wireless wps rogue security-level custom
+wireless wps ap-authentication threshold 1
+wireless wps client-exclusion all
+wireless wps client-exclusion dot11-assoc
+wireless wps client-exclusion dot1x-auth
+wireless wps client-exclusion dot1x-timeout
+wireless wps client-exclusion ip-theft
+wireless wps client-exclusion web-auth
+wireless assisted-roaming denial-maximum 5
+wireless assisted-roaming floor-bias 15
+wireless assisted-roaming prediction-minimum 3
+wireless client client-steering client-count 3
+wireless client client-steering min-rssi-24ghz -60
+wireless client client-steering min-rssi-5ghz -65
+wireless client client-steering util-threshold 20
+wireless client client-steering window-size 3
+wireless client max-user-login 0
+wireless macro-micro steering probe-suppression aggressiveness 3
+wireless macro-micro steering probe-suppression hysteresis -6
+wireless macro-micro steering transition-threshold balancing-window 3
+wireless macro-micro steering transition-threshold client count 3
+wireless macro-micro steering transition-threshold macro-to-micro -55
+wireless macro-micro steering transition-threshold micro-to-macro -65
+no wireless password-policy default
+wireless probe filter
+wireless probe limit 2 500
+no wireless probe locally-administered-mac
+no wireless rf-network secure
+wireless rf-network default
+wireless security dot1x eapol-key retries 2
+wireless security dot1x eapol-key timeout 1000
+wireless security dot1x group-key interval 3600
+wireless security dot1x identity-request retries 2
+wireless security dot1x identity-request timeout 30
+wireless security dot1x request retries 2
+wireless security dot1x request timeout 30
+wireless security web-auth retries 3
+wireless wps mfp
+wireless wps mfp ap-impersonation
+wireless wps mfp key-refresh-interval 24
+wireless fabric control-plane default-control-plane
+wireless max-warning
+wireless max-warning period 5
+wireless max-warning threshold clients 75
+wireless multicast link-local
+wireless admission-control aaa-outstanding-request-queue high 500
+wireless admission-control cpu high 90
+wireless admission-control ipc-resources high 85
+wireless admission-control ipc-resources low 75
+wireless admission-control iplearn-queue high 1300
+wireless admission-control mobility-discov-queue high 400
+wireless client band-select client-mid-rssi -80
+wireless client band-select client-rssi -80
+wireless client band-select cycle-count 2
+wireless client band-select cycle-threshold 200
+wireless client band-select expire dual-band 60
+wireless client band-select expire suppression 20
+wireless country US
+no wireless wlancc
+nmsp notification interval rssi clients 2
+nmsp notification interval rssi rfid 2
+nmsp notification interval rssi rogues ap 2
+nmsp notification interval rssi rogues client 2
+nmsp notification interval spectrum interferers 2
+tunnel eogre heartbeat interval 60
+tunnel eogre heartbeat max-skip-count 3
+wlan test-yijxi_Global_NF_6d2f2709 18 test-yijxiang-local
+ no assisted-roaming dual-list
+ assisted-roaming neighbor-list
+ no band-select
+ broadcast-ssid
+ bss-transition
+ no bss-transition disassociation-imminent
+ bss-transition disassociation-imminent oproam-timer 40
+ bss-transition disassociation-imminent timer 200
+ no bss-transition dual-list
+ bssmaxidle
+ no bssmaxidle protected-mode
+ no ccx aironet-iesupport
+ no channel-scan defer-priority 4
+ channel-scan defer-priority 5
+ channel-scan defer-priority 6
+ channel-scan defer-time 100
+ chd
+ client association limit ap 0
+ client association limit radio 200
+ client association limit 0
+ no client-steering
+ device-analytics
+ no device-analytics export
+ device-analytics pc-analytics
+ dms
+ dot11ax
+ dot11ax downlink-mumimo
+ dot11ax downlink-ofdma
+ dot11ax target-waketime
+ dot11ax twt-broadcast-support
+ dot11ax uplink-mumimo
+ dot11ax uplink-ofdma
+ dtim dot11 24ghz 1
+ dtim dot11 5ghz 1
+ no ignore-rsn-ie-len
+ no load-balance
+ mu-mimo
+ okc
+ no scan-report association
+ no scan-report roam
+ scheduler asr
+ security ft reassociation-timeout 20
+ security ft over-the-ds
+ security ft adaptive
+ security wpa wpa2 ciphers aes
+ no security wpa wpa2 ciphers ccmp256
+ no security wpa wpa2 ciphers gcmp128
+ no security wpa wpa2 ciphers gcmp256
+ no security wpa wpa2 easy-psk
+ no security wpa wpa2 gtk-randomize
+ security wpa psk set-key ascii 0 cisco12345
+ security wpa akm cckm timestamp-tolerance 1000
+ no security wpa akm dot1x
+ no security wpa akm owe
+ security wpa akm psk
+ no security wpa akm sae
+ security wpa akm sae anti-clogging-threshold 1500
+ security wpa akm sae max-retries 5
+ security wpa akm sae retransmit-timeout 400
+ no security wpa osen
+ security wpa transition-mode-wlan-id 0
+ no security wpa wpa3
+ security pmf association-comeback 1
+ security pmf saquery-retry-time 200
+ security static-wep-key authentication open
+ no tfs
+ no wifi-direct policy
+ wmm allowed
+ no wnm-sleep-mode
+ no mbo
+ no wifi-to-cellular
+ no shutdown
+network-assurance ap client-event frequency 30
+no network-assurance dataplane-statistics
+network-assurance enable
+network-assurance icap server port 32626
+network-assurance url https://198.18.129.100
+network-assurance na-certificate PROTOCOL_HTTP 198.18.129.100 /ca/ pem
+ap dot11 24ghz rf-profile Low_Client_Density_rf_24gh
+ band-select client mid-rssi -80
+ band-select client rssi -80
+ band-select cycle count 2
+ band-select cycle threshold 200
+ band-select expire dual-band 60
+ band-select expire suppression 20
+ channel foreign
+ client-network-preference default
+ coverage data rssi threshold -90
+ coverage exception 25
+ coverage level 2
+ coverage voice rssi threshold -90
+ description "pre configured Low Client Density rfprofile for 2.4gh radio"
+ no dot11ax spatial-reuse obss-pd
+ dot11ax spatial-reuse obss-pd non-srg-max -62
+ high-density clients count 200
+ high-density rx-sop threshold low
+ no hsr-mode
+ hsr-mode neighbor-timeout 5
+ load-balancing denial 3
+ load-balancing window 5
+ ndp-mode auto
+ rate RATE_11M mandatory
+ rate RATE_12M supported
+ rate RATE_18M supported
+ rate RATE_1M mandatory
+ rate RATE_24M supported
+ rate RATE_2M mandatory
+ rate RATE_36M supported
+ rate RATE_48M supported
+ rate RATE_54M supported
+ rate RATE_5_5M mandatory
+ rate RATE_6M supported
+ rate RATE_9M supported
+ rate mcs 0
+ rate mcs 1
+ rate mcs 2
+ rate mcs 3
+ rate mcs 4
+ rate mcs 5
+ rate mcs 6
+ rate mcs 7
+ rate mcs 8
+ rate mcs 9
+ rate mcs 10
+ rate mcs 11
+ rate mcs 12
+ rate mcs 13
+ rate mcs 14
+ rate mcs 15
+ rate mcs 16
+ rate mcs 17
+ rate mcs 18
+ rate mcs 19
+ rate mcs 20
+ rate mcs 21
+ rate mcs 22
+ rate mcs 23
+ rate mcs 24
+ rate mcs 25
+ rate mcs 26
+ rate mcs 27
+ rate mcs 28
+ rate mcs 29
+ rate mcs 30
+ rate mcs 31
+ trap threshold clients 12
+ trap threshold interference 10
+ trap threshold noise -70
+ trap threshold utilization 80
+ tx-power max 30
+ tx-power min -10
+ tx-power v1 threshold -65
+ no shutdown
+ap dot11 24ghz rf-profile High_Client_Density_rf_24gh
+ band-select client mid-rssi -80
+ band-select client rssi -80
+ band-select cycle count 2
+ band-select cycle threshold 200
+ band-select expire dual-band 60
+ band-select expire suppression 20
+ channel foreign
+ client-network-preference default
+ coverage data rssi threshold -80
+ coverage exception 25
+ coverage level 3
+ coverage voice rssi threshold -80
+ description "pre configured High Client Density rfprofile for 2.4gh radio"
+ no dot11ax spatial-reuse obss-pd
+ dot11ax spatial-reuse obss-pd non-srg-max -62
+ high-density clients count 200
+ high-density rx-sop threshold medium
+ no hsr-mode
+ hsr-mode neighbor-timeout 5
+ load-balancing denial 3
+ load-balancing window 5
+ ndp-mode auto
+ rate RATE_11M disable
+ rate RATE_12M mandatory
+ rate RATE_18M supported
+ rate RATE_1M disable
+ rate RATE_24M supported
+ rate RATE_2M disable
+ rate RATE_36M supported
+ rate RATE_48M supported
+ rate RATE_54M supported
+ rate RATE_5_5M disable
+ rate RATE_6M disable
+ rate RATE_9M supported
+ rate mcs 0
+ rate mcs 1
+ rate mcs 2
+ rate mcs 3
+ rate mcs 4
+ rate mcs 5
+ rate mcs 6
+ rate mcs 7
+ rate mcs 8
+ rate mcs 9
+ rate mcs 10
+ rate mcs 11
+ rate mcs 12
+ rate mcs 13
+ rate mcs 14
+ rate mcs 15
+ rate mcs 16
+ rate mcs 17
+ rate mcs 18
+ rate mcs 19
+ rate mcs 20
+ rate mcs 21
+ rate mcs 22
+ rate mcs 23
+ rate mcs 24
+ rate mcs 25
+ rate mcs 26
+ rate mcs 27
+ rate mcs 28
+ rate mcs 29
+ rate mcs 30
+ rate mcs 31
+ trap threshold clients 12
+ trap threshold interference 10
+ trap threshold noise -70
+ trap threshold utilization 80
+ tx-power max 30
+ tx-power min 7
+ tx-power v1 threshold -70
+ no shutdown
+ap dot11 24ghz rf-profile Typical_Client_Density_rf_24gh
+ band-select client mid-rssi -80
+ band-select client rssi -80
+ band-select cycle count 2
+ band-select cycle threshold 200
+ band-select expire dual-band 60
+ band-select expire suppression 20
+ channel foreign
+ client-network-preference default
+ coverage data rssi threshold -80
+ coverage exception 25
+ coverage level 3
+ coverage voice rssi threshold -80
+ description "pre configured Typical Client Density rfprofile for 2.4gh radio"
+ no dot11ax spatial-reuse obss-pd
+ dot11ax spatial-reuse obss-pd non-srg-max -62
+ high-density clients count 200
+ high-density rx-sop threshold auto
+ no hsr-mode
+ hsr-mode neighbor-timeout 5
+ load-balancing denial 3
+ load-balancing window 5
+ ndp-mode auto
+ rate RATE_11M disable
+ rate RATE_12M mandatory
+ rate RATE_18M supported
+ rate RATE_1M disable
+ rate RATE_24M supported
+ rate RATE_2M disable
+ rate RATE_36M supported
+ rate RATE_48M supported
+ rate RATE_54M supported
+ rate RATE_5_5M disable
+ rate RATE_6M disable
+ rate RATE_9M supported
+ rate mcs 0
+ rate mcs 1
+ rate mcs 2
+ rate mcs 3
+ rate mcs 4
+ rate mcs 5
+ rate mcs 6
+ rate mcs 7
+ rate mcs 8
+ rate mcs 9
+ rate mcs 10
+ rate mcs 11
+ rate mcs 12
+ rate mcs 13
+ rate mcs 14
+ rate mcs 15
+ rate mcs 16
+ rate mcs 17
+ rate mcs 18
+ rate mcs 19
+ rate mcs 20
+ rate mcs 21
+ rate mcs 22
+ rate mcs 23
+ rate mcs 24
+ rate mcs 25
+ rate mcs 26
+ rate mcs 27
+ rate mcs 28
+ rate mcs 29
+ rate mcs 30
+ rate mcs 31
+ trap threshold clients 12
+ trap threshold interference 10
+ trap threshold noise -70
+ trap threshold utilization 80
+ tx-power max 30
+ tx-power min -10
+ tx-power v1 threshold -70
+ no shutdown
+ap dot11 24ghz rrm group-mode auto
+ap dot11 24ghz rrm bss-color auto
+ap dot11 24ghz rrm channel dca anchor-time 0
+ap dot11 24ghz rrm channel dca global auto
+no ap dot11 24ghz rrm channel dca global once
+ap dot11 24ghz rrm channel dca interval 0
+ap dot11 24ghz rrm channel dca min-metric -95
+ap dot11 24ghz rrm channel dca sensitivity medium
+no ap dot11 24ghz rrm channel load
+ap dot11 24ghz rrm channel noise
+ap dot11 24ghz rrm coverage
+ap dot11 24ghz rrm coverage data fail-percentage 50
+ap dot11 24ghz rrm coverage data packet-count 50
+ap dot11 24ghz rrm coverage voice fail-percentage 50
+ap dot11 24ghz rrm coverage voice packet-count 100
+no ap dot11 24ghz rrm logging channel
+no ap dot11 24ghz rrm logging coverage
+no ap dot11 24ghz rrm logging foreign
+no ap dot11 24ghz rrm logging load
+no ap dot11 24ghz rrm logging noise
+no ap dot11 24ghz rrm logging performance
+no ap dot11 24ghz rrm logging txpower
+ap dot11 24ghz rrm monitor
+ap dot11 24ghz rrm monitor channel-list country
+ap dot11 24ghz rrm monitor coverage 180
+ap dot11 24ghz rrm monitor load 60
+ap dot11 24ghz rrm monitor measurement 180
+ap dot11 24ghz rrm monitor neighbor-timeout-factor 20
+ap dot11 24ghz rrm monitor reporting 180
+ap dot11 24ghz rrm monitor rssi-normalization
+ap dot11 24ghz rrm ndp-type transparent
+no ap dot11 24ghz rrm notification channel-change
+ap dot11 24ghz rrm notification channel-change threshold 1
+no ap dot11 24ghz rrm notification power-change
+ap dot11 24ghz rrm notification power-change threshold upper 6 lower 6
+no ap dot11 24ghz rrm optimized-roam
+ap dot11 24ghz rrm optimized-roam data-rate-threshold disable
+ap dot11 24ghz rrm optimized-roam hysteresis 6
+ap dot11 24ghz rrm profile throughput 1000000
+ap dot11 24ghz rrm txpower auto
+ap dot11 24ghz rrm channel cleanair-event custom-threshold 1
+ap dot11 24ghz rrm channel cleanair-event rogue-contribution duty-cycle 80
+ap dot11 24ghz rrm channel cleanair-event sensitivity low
+no ap dot11 24ghz SI
+ap dot11 24ghz cleanair
+no ap dot11 24ghz cleanair alarm air-quality
+ap dot11 24ghz cleanair alarm air-quality threshold 10
+no ap dot11 24ghz cleanair alarm device
+no ap dot11 24ghz cleanair alarm device ble-beacon
+no ap dot11 24ghz cleanair alarm device bt-discovery
+no ap dot11 24ghz cleanair alarm device bt-link
+no ap dot11 24ghz cleanair alarm device canopy
+no ap dot11 24ghz cleanair alarm device cont-tx
+no ap dot11 24ghz cleanair alarm device dect-like
+no ap dot11 24ghz cleanair alarm device fh
+no ap dot11 24ghz cleanair alarm device inv
+no ap dot11 24ghz cleanair alarm device jammer
+no ap dot11 24ghz cleanair alarm device mw-oven
+no ap dot11 24ghz cleanair alarm device nonstd
+no ap dot11 24ghz cleanair alarm device si_fhss
+no ap dot11 24ghz cleanair alarm device superag
+no ap dot11 24ghz cleanair alarm device tdd-tx
+no ap dot11 24ghz cleanair alarm device video
+no ap dot11 24ghz cleanair alarm device wimax-fixed
+no ap dot11 24ghz cleanair alarm device wimax-mobile
+no ap dot11 24ghz cleanair alarm device xbox
+no ap dot11 24ghz cleanair alarm device zigbee
+no ap dot11 24ghz cleanair alarm unclassified
+ap dot11 24ghz cleanair alarm unclassified threshold 35
+no ap dot11 24ghz cleanair device ble-beacon
+ap dot11 24ghz cleanair device bt-discovery
+ap dot11 24ghz cleanair device bt-link
+ap dot11 24ghz cleanair device canopy
+ap dot11 24ghz cleanair device cont-tx
+ap dot11 24ghz cleanair device dect-like
+ap dot11 24ghz cleanair device fh
+ap dot11 24ghz cleanair device inv
+ap dot11 24ghz cleanair device jammer
+ap dot11 24ghz cleanair device mw-oven
+ap dot11 24ghz cleanair device nonstd
+ap dot11 24ghz cleanair device report
+ap dot11 24ghz cleanair device si_fhss
+ap dot11 24ghz cleanair device superag
+ap dot11 24ghz cleanair device tdd-tx
+ap dot11 24ghz cleanair device video
+ap dot11 24ghz cleanair device wimax-fixed
+ap dot11 24ghz cleanair device wimax-mobile
+ap dot11 24ghz cleanair device xbox
+ap dot11 24ghz cleanair device zigbee
+no ap dot11 24ghz rrm tpc tpcv1-chan-aware
+ap dot11 24ghz rrm txpower 1
+ap dot11 24ghz beaconperiod 100
+ap dot11 24ghz cac media-stream max-bandwidth 5
+ap dot11 24ghz cac media-stream multicast-direct max-retry-percent 80
+ap dot11 24ghz cac media-stream multicast-direct min-client-rate 6
+ap dot11 24ghz cac multimedia max-bandwidth 85
+ap dot11 24ghz media-stream multicast-direct client-maximum 0
+ap dot11 24ghz media-stream multicast-direct radio-maximum 0
+ap dot11 24ghz cac voice max-bandwidth 75
+ap dot11 24ghz cac voice load-based
+ap dot11 24ghz cac voice roam-bandwidth 6
+ap dot11 24ghz cac voice sip bandwidth 64 sample-interval 20
+ap dot11 24ghz cac voice stream-size 84000 max-streams 2
+ap dot11 24ghz cac voice tspec-inactivity-timeout enable
+ap dot11 24ghz cac voice acm
+ap dot11 24ghz cellular-steering rssi-threshold -85
+ap dot11 24ghz dot11ax
+no ap dot11 24ghz dot11ax bss-color
+ap dot11 24ghz dot11ax dynamicfrag
+ap dot11 24ghz dot11ax multibssid
+ap dot11 24ghz dot11ax target-wakeup-time
+ap dot11 24ghz dot11ax twt-broadcast
+ap dot11 24ghz dot11g
+ap dot11 24ghz dot11n
+ap dot11 24ghz dot11n a-mpdu tx scheduler
+ap dot11 24ghz dot11n a-mpdu tx scheduler timeout rt 10
+ap dot11 24ghz dot11n guard-interval any
+no ap dot11 24ghz dot11n guard-interval long
+ap dot11 24ghz dot11n rifs rx
+ap dot11 24ghz dtpc
+ap dot11 24ghz edca-parameters client-load-based
+ap dot11 24ghz edca-parameters fastlane
+no ap dot11 24ghz exp-bwreq
+ap dot11 24ghz fragmentation 2346
+ap dot11 24ghz preamble short
+ap dot11 24ghz service-policy rate 200000000
+no ap dot11 24ghz shutdown
+no ap dot11 24ghz tsm
+ap dot11 24ghz world-mode
+ap dot11 24ghz rrm channel foreign
+ap dot11 24ghz rrm coverage data rssi-threshold -80
+ap dot11 24ghz rrm coverage exception global 25
+ap dot11 24ghz rrm coverage level global 3
+ap dot11 24ghz rrm coverage voice rssi-threshold -80
+ap dot11 24ghz rrm ndp-mode auto
+ap dot11 24ghz rrm profile clients 12
+ap dot11 24ghz rrm profile foreign 10
+ap dot11 24ghz rrm profile noise -70
+ap dot11 24ghz rrm profile utilization 80
+ap dot11 24ghz rrm tpc threshold -70
+ap dot11 24ghz rrm txpower max 30
+ap dot11 24ghz rrm txpower min -10
+ap dot11 24ghz client-network-preference default
+ap dot11 24ghz clients count 200
+no ap dot11 24ghz dot11ax spatial-reuse obss-pd
+ap dot11 24ghz dot11ax spatial-reuse obss-pd non-srg-max -62
+ap dot11 24ghz dot11n mcs tx 0
+ap dot11 24ghz dot11n mcs tx 1
+ap dot11 24ghz dot11n mcs tx 2
+ap dot11 24ghz dot11n mcs tx 3
+ap dot11 24ghz dot11n mcs tx 4
+ap dot11 24ghz dot11n mcs tx 5
+ap dot11 24ghz dot11n mcs tx 6
+ap dot11 24ghz dot11n mcs tx 7
+ap dot11 24ghz dot11n mcs tx 8
+ap dot11 24ghz dot11n mcs tx 9
+ap dot11 24ghz dot11n mcs tx 10
+ap dot11 24ghz dot11n mcs tx 11
+ap dot11 24ghz dot11n mcs tx 12
+ap dot11 24ghz dot11n mcs tx 13
+ap dot11 24ghz dot11n mcs tx 14
+ap dot11 24ghz dot11n mcs tx 15
+ap dot11 24ghz dot11n mcs tx 16
+ap dot11 24ghz dot11n mcs tx 17
+ap dot11 24ghz dot11n mcs tx 18
+ap dot11 24ghz dot11n mcs tx 19
+ap dot11 24ghz dot11n mcs tx 20
+ap dot11 24ghz dot11n mcs tx 21
+ap dot11 24ghz dot11n mcs tx 22
+ap dot11 24ghz dot11n mcs tx 23
+ap dot11 24ghz dot11n mcs tx 24
+ap dot11 24ghz dot11n mcs tx 25
+ap dot11 24ghz dot11n mcs tx 26
+ap dot11 24ghz dot11n mcs tx 27
+ap dot11 24ghz dot11n mcs tx 28
+ap dot11 24ghz dot11n mcs tx 29
+ap dot11 24ghz dot11n mcs tx 30
+ap dot11 24ghz dot11n mcs tx 31
+ap dot11 24ghz load-balancing denial 3
+ap dot11 24ghz load-balancing window 5
+ap dot11 24ghz rate RATE_11M mandatory
+ap dot11 24ghz rate RATE_12M supported
+ap dot11 24ghz rate RATE_18M supported
+ap dot11 24ghz rate RATE_1M mandatory
+ap dot11 24ghz rate RATE_24M supported
+ap dot11 24ghz rate RATE_2M mandatory
+ap dot11 24ghz rate RATE_36M supported
+ap dot11 24ghz rate RATE_48M supported
+ap dot11 24ghz rate RATE_54M supported
+ap dot11 24ghz rate RATE_5_5M mandatory
+ap dot11 24ghz rate RATE_6M supported
+ap dot11 24ghz rate RATE_9M supported
+no ap dot11 24ghz rssi-check
+no ap dot11 24ghz rssi-threshold
+ap dot11 24ghz rssi-threshold -127
+ap dot11 24ghz rx-sop threshold auto
+ap dot11 5ghz rf-profile Low_Client_Density_rf_5gh
+ channel chan-width best
+ channel foreign
+ client-aware-fra client-reset 5
+ client-aware-fra client-select 50
+ client-network-preference default
+ coverage data rssi threshold -90
+ coverage exception 25
+ coverage level 2
+ coverage voice rssi threshold -90
+ description "pre configured Low Client Density rfprofile for 5gh radio"
+ no dot11ax spatial-reuse obss-pd
+ dot11ax spatial-reuse obss-pd non-srg-max -62
+ high-density clients count 200
+ high-density rx-sop threshold low
+ no hsr-mode
+ hsr-mode neighbor-timeout 5
+ load-balancing denial 3
+ load-balancing window 5
+ ndp-mode auto
+ rate RATE_12M mandatory
+ rate RATE_18M supported
+ rate RATE_24M mandatory
+ rate RATE_36M supported
+ rate RATE_48M supported
+ rate RATE_54M supported
+ rate RATE_6M mandatory
+ rate RATE_9M supported
+ rate mcs 0
+ rate mcs 1
+ rate mcs 2
+ rate mcs 3
+ rate mcs 4
+ rate mcs 5
+ rate mcs 6
+ rate mcs 7
+ rate mcs 8
+ rate mcs 9
+ rate mcs 10
+ rate mcs 11
+ rate mcs 12
+ rate mcs 13
+ rate mcs 14
+ rate mcs 15
+ rate mcs 16
+ rate mcs 17
+ rate mcs 18
+ rate mcs 19
+ rate mcs 20
+ rate mcs 21
+ rate mcs 22
+ rate mcs 23
+ rate mcs 24
+ rate mcs 25
+ rate mcs 26
+ rate mcs 27
+ rate mcs 28
+ rate mcs 29
+ rate mcs 30
+ rate mcs 31
+ trap threshold clients 12
+ trap threshold interference 10
+ trap threshold noise -70
+ trap threshold utilization 80
+ tx-power max 30
+ tx-power min -10
+ tx-power v1 threshold -60
+ no shutdown
+ap dot11 5ghz rf-profile High_Client_Density_rf_5gh
+ channel chan-width best
+ channel foreign
+ client-aware-fra client-reset 5
+ client-aware-fra client-select 50
+ client-network-preference default
+ coverage data rssi threshold -80
+ coverage exception 25
+ coverage level 3
+ coverage voice rssi threshold -80
+ description "pre configured High Client Density rfprofile for 5gh radio"
+ no dot11ax spatial-reuse obss-pd
+ dot11ax spatial-reuse obss-pd non-srg-max -62
+ high-density clients count 200
+ high-density rx-sop threshold medium
+ no hsr-mode
+ hsr-mode neighbor-timeout 5
+ load-balancing denial 3
+ load-balancing window 5
+ ndp-mode auto
+ rate RATE_12M mandatory
+ rate RATE_18M supported
+ rate RATE_24M mandatory
+ rate RATE_36M supported
+ rate RATE_48M supported
+ rate RATE_54M supported
+ rate RATE_6M disable
+ rate RATE_9M disable
+ rate mcs 0
+ rate mcs 1
+ rate mcs 2
+ rate mcs 3
+ rate mcs 4
+ rate mcs 5
+ rate mcs 6
+ rate mcs 7
+ rate mcs 8
+ rate mcs 9
+ rate mcs 10
+ rate mcs 11
+ rate mcs 12
+ rate mcs 13
+ rate mcs 14
+ rate mcs 15
+ rate mcs 16
+ rate mcs 17
+ rate mcs 18
+ rate mcs 19
+ rate mcs 20
+ rate mcs 21
+ rate mcs 22
+ rate mcs 23
+ rate mcs 24
+ rate mcs 25
+ rate mcs 26
+ rate mcs 27
+ rate mcs 28
+ rate mcs 29
+ rate mcs 30
+ rate mcs 31
+ trap threshold clients 12
+ trap threshold interference 10
+ trap threshold noise -70
+ trap threshold utilization 80
+ tx-power max 30
+ tx-power min 7
+ tx-power v1 threshold -65
+ no shutdown
+ap dot11 5ghz rf-profile Typical_Client_Density_rf_5gh
+ channel chan-width best
+ channel foreign
+ client-aware-fra client-reset 5
+ client-aware-fra client-select 50
+ client-network-preference default
+ coverage data rssi threshold -80
+ coverage exception 25
+ coverage level 3
+ coverage voice rssi threshold -80
+ description "pre configured Typical Density rfprofile for 5gh radio"
+ no dot11ax spatial-reuse obss-pd
+ dot11ax spatial-reuse obss-pd non-srg-max -62
+ high-density clients count 200
+ high-density rx-sop threshold auto
+ no hsr-mode
+ hsr-mode neighbor-timeout 5
+ load-balancing denial 3
+ load-balancing window 5
+ ndp-mode auto
+ rate RATE_12M mandatory
+ rate RATE_18M supported
+ rate RATE_24M mandatory
+ rate RATE_36M supported
+ rate RATE_48M supported
+ rate RATE_54M supported
+ rate RATE_6M mandatory
+ rate RATE_9M supported
+ rate mcs 0
+ rate mcs 1
+ rate mcs 2
+ rate mcs 3
+ rate mcs 4
+ rate mcs 5
+ rate mcs 6
+ rate mcs 7
+ rate mcs 8
+ rate mcs 9
+ rate mcs 10
+ rate mcs 11
+ rate mcs 12
+ rate mcs 13
+ rate mcs 14
+ rate mcs 15
+ rate mcs 16
+ rate mcs 17
+ rate mcs 18
+ rate mcs 19
+ rate mcs 20
+ rate mcs 21
+ rate mcs 22
+ rate mcs 23
+ rate mcs 24
+ rate mcs 25
+ rate mcs 26
+ rate mcs 27
+ rate mcs 28
+ rate mcs 29
+ rate mcs 30
+ rate mcs 31
+ trap threshold clients 12
+ trap threshold interference 10
+ trap threshold noise -70
+ trap threshold utilization 80
+ tx-power max 30
+ tx-power min -10
+ tx-power v1 threshold -70
+ no shutdown
+ap dot11 5ghz rrm group-mode auto
+ap dot11 5ghz rrm bss-color auto
+no ap dot11 5ghz rrm ccx location-measurement
+ap dot11 5ghz rrm channel dca anchor-time 0
+ap dot11 5ghz rrm channel dca chan-width width-max WIDTH_40Mhz
+ap dot11 5ghz rrm channel dca global auto
+no ap dot11 5ghz rrm channel dca global once
+ap dot11 5ghz rrm channel dca interval 0
+ap dot11 5ghz rrm channel dca min-metric -95
+ap dot11 5ghz rrm channel dca sensitivity medium
+no ap dot11 5ghz rrm channel load
+ap dot11 5ghz rrm channel noise
+ap dot11 5ghz rrm coverage
+ap dot11 5ghz rrm coverage data fail-percentage 50
+ap dot11 5ghz rrm coverage data packet-count 50
+ap dot11 5ghz rrm coverage voice fail-percentage 50
+ap dot11 5ghz rrm coverage voice packet-count 100
+no ap dot11 5ghz rrm logging channel
+no ap dot11 5ghz rrm logging foreign
+no ap dot11 5ghz rrm logging load
+no ap dot11 5ghz rrm logging noise
+no ap dot11 5ghz rrm logging performance
+no ap dot11 5ghz rrm logging txpower
+ap dot11 5ghz rrm monitor
+ap dot11 5ghz rrm monitor channel-list country
+ap dot11 5ghz rrm monitor coverage 180
+ap dot11 5ghz rrm monitor load 60
+ap dot11 5ghz rrm monitor measurement 180
+ap dot11 5ghz rrm monitor neighbor-timeout-factor 20
+ap dot11 5ghz rrm monitor reporting 180
+ap dot11 5ghz rrm monitor rssi-normalization
+ap dot11 5ghz rrm ndp-type transparent
+no ap dot11 5ghz rrm notification channel-change
+ap dot11 5ghz rrm notification channel-change threshold 1
+no ap dot11 5ghz rrm notification power-change
+ap dot11 5ghz rrm notification power-change threshold upper 6 lower 6
+no ap dot11 5ghz rrm optimized-roam
+ap dot11 5ghz rrm optimized-roam data-rate-threshold disable
+ap dot11 5ghz rrm optimized-roam hysteresis 6
+ap dot11 5ghz rrm profile throughput 1000000
+ap dot11 5ghz rrm txpower auto
+ap dot11 5ghz rrm channel cleanair-event custom-threshold 1
+ap dot11 5ghz rrm channel cleanair-event rogue-contribution duty-cycle 80
+ap dot11 5ghz rrm channel cleanair-event sensitivity low
+no ap dot11 5ghz SI
+ap dot11 5ghz cleanair
+no ap dot11 5ghz cleanair alarm air-quality
+ap dot11 5ghz cleanair alarm air-quality threshold 10
+no ap dot11 5ghz cleanair alarm device
+no ap dot11 5ghz cleanair alarm device canopy
+no ap dot11 5ghz cleanair alarm device cont-tx
+no ap dot11 5ghz cleanair alarm device dect-like
+no ap dot11 5ghz cleanair alarm device inv
+no ap dot11 5ghz cleanair alarm device jammer
+no ap dot11 5ghz cleanair alarm device nonstd
+no ap dot11 5ghz cleanair alarm device si_fhss
+no ap dot11 5ghz cleanair alarm device superag
+no ap dot11 5ghz cleanair alarm device tdd-tx
+no ap dot11 5ghz cleanair alarm device video
+no ap dot11 5ghz cleanair alarm device wimax-fixed
+no ap dot11 5ghz cleanair alarm device wimax-mobile
+no ap dot11 5ghz cleanair alarm unclassified
+ap dot11 5ghz cleanair alarm unclassified threshold 35
+ap dot11 5ghz cleanair device canopy
+ap dot11 5ghz cleanair device cont-tx
+ap dot11 5ghz cleanair device dect-like
+ap dot11 5ghz cleanair device inv
+ap dot11 5ghz cleanair device jammer
+ap dot11 5ghz cleanair device nonstd
+ap dot11 5ghz cleanair device report
+ap dot11 5ghz cleanair device si_fhss
+ap dot11 5ghz cleanair device superag
+ap dot11 5ghz cleanair device tdd-tx
+ap dot11 5ghz cleanair device video
+ap dot11 5ghz cleanair device wimax-fixed
+ap dot11 5ghz cleanair device wimax-mobile
+no ap dot11 5ghz rrm tpc tpcv1-chan-aware
+ap dot11 5ghz rrm txpower 1
+ap dot11 5ghz beaconperiod 100
+ap dot11 5ghz cac media-stream max-bandwidth 5
+ap dot11 5ghz cac media-stream multicast-direct max-retry-percent 80
+ap dot11 5ghz cac media-stream multicast-direct min-client-rate 6
+ap dot11 5ghz cac multimedia max-bandwidth 85
+ap dot11 5ghz media-stream multicast-direct client-maximum 0
+ap dot11 5ghz media-stream multicast-direct radio-maximum 0
+ap dot11 5ghz cac voice max-bandwidth 75
+ap dot11 5ghz cac voice load-based
+ap dot11 5ghz cac voice roam-bandwidth 6
+ap dot11 5ghz cac voice sip bandwidth 64 sample-interval 20
+ap dot11 5ghz cac voice stream-size 84000 max-streams 2
+ap dot11 5ghz cac voice tspec-inactivity-timeout enable
+ap dot11 5ghz cac voice acm
+ap dot11 5ghz cellular-steering rssi-threshold -85
+ap dot11 5ghz dot11ac
+ap dot11 5ghz dot11ax
+no ap dot11 5ghz dot11ax bss-color
+ap dot11 5ghz dot11ax dynamic-fragment
+ap dot11 5ghz dot11ax multiple-bssid
+ap dot11 5ghz dot11ax target-wakeup-time
+ap dot11 5ghz dot11ax twt-broadcast
+ap dot11 5ghz dot11n
+ap dot11 5ghz dot11n a-mpdu tx scheduler
+ap dot11 5ghz dot11n a-mpdu tx scheduler frame-burst automatic
+ap dot11 5ghz dot11n a-mpdu tx scheduler timeout rt 10
+ap dot11 5ghz dot11n guard-interval any
+no ap dot11 5ghz dot11n guard-interval long
+ap dot11 5ghz dot11n rifs rx
+ap dot11 5ghz dtpc
+no ap dot11 5ghz exp-bwreq
+ap dot11 5ghz fragmentation 2346
+ap dot11 5ghz service-policy rate 11ac 1000000000
+ap dot11 5ghz service-policy rate 11n 400000000
+no ap dot11 5ghz shutdown
+no ap dot11 5ghz tsm
+ap dot11 5ghz world-mode
+ap dot11 5ghz edca-parameters client-load-based
+ap dot11 5ghz edca-parameters fastlane
+ap dot11 5ghz channelswitch
+no ap dot11 5ghz channelswitch quiet
+ap dot11 5ghz power-constraint 0
+ap dot11 5ghz smart-dfs
+ap dot11 5ghz rrm channel dca chan-width best
+ap dot11 5ghz rrm channel foreign
+ap dot11 5ghz rrm coverage data rssi-threshold -80
+ap dot11 5ghz rrm coverage exception global 25
+ap dot11 5ghz rrm coverage level global 3
+ap dot11 5ghz rrm coverage voice rssi-threshold -80
+ap dot11 5ghz rrm ndp-mode auto
+ap dot11 5ghz rrm profile clients 12
+ap dot11 5ghz rrm profile foreign 10
+ap dot11 5ghz rrm profile noise -70
+ap dot11 5ghz rrm profile utilization 80
+ap dot11 5ghz rrm tpc threshold -70
+ap dot11 5ghz rrm txpower max 30
+ap dot11 5ghz rrm txpower min -10
+ap dot11 5ghz client-aware-fra client-reset 5
+ap dot11 5ghz client-aware-fra client-select 50
+ap dot11 5ghz client-network-preference default
+ap dot11 5ghz clients count 200
+no ap dot11 5ghz dot11ax spatial-reuse obss-pd
+ap dot11 5ghz dot11ax spatial-reuse obss-pd non-srg-max -62
+ap dot11 5ghz dot11n mcs tx 0
+ap dot11 5ghz dot11n mcs tx 1
+ap dot11 5ghz dot11n mcs tx 2
+ap dot11 5ghz dot11n mcs tx 3
+ap dot11 5ghz dot11n mcs tx 4
+ap dot11 5ghz dot11n mcs tx 5
+ap dot11 5ghz dot11n mcs tx 6
+ap dot11 5ghz dot11n mcs tx 7
+ap dot11 5ghz dot11n mcs tx 8
+ap dot11 5ghz dot11n mcs tx 9
+ap dot11 5ghz dot11n mcs tx 10
+ap dot11 5ghz dot11n mcs tx 11
+ap dot11 5ghz dot11n mcs tx 12
+ap dot11 5ghz dot11n mcs tx 13
+ap dot11 5ghz dot11n mcs tx 14
+ap dot11 5ghz dot11n mcs tx 15
+ap dot11 5ghz dot11n mcs tx 16
+ap dot11 5ghz dot11n mcs tx 17
+ap dot11 5ghz dot11n mcs tx 18
+ap dot11 5ghz dot11n mcs tx 19
+ap dot11 5ghz dot11n mcs tx 20
+ap dot11 5ghz dot11n mcs tx 21
+ap dot11 5ghz dot11n mcs tx 22
+ap dot11 5ghz dot11n mcs tx 23
+ap dot11 5ghz dot11n mcs tx 24
+ap dot11 5ghz dot11n mcs tx 25
+ap dot11 5ghz dot11n mcs tx 26
+ap dot11 5ghz dot11n mcs tx 27
+ap dot11 5ghz dot11n mcs tx 28
+ap dot11 5ghz dot11n mcs tx 29
+ap dot11 5ghz dot11n mcs tx 30
+ap dot11 5ghz dot11n mcs tx 31
+ap dot11 5ghz load-balancing denial 3
+ap dot11 5ghz load-balancing window 5
+ap dot11 5ghz rate RATE_12M mandatory
+ap dot11 5ghz rate RATE_18M supported
+ap dot11 5ghz rate RATE_24M mandatory
+ap dot11 5ghz rate RATE_36M supported
+ap dot11 5ghz rate RATE_48M supported
+ap dot11 5ghz rate RATE_54M supported
+ap dot11 5ghz rate RATE_6M mandatory
+ap dot11 5ghz rate RATE_9M supported
+no ap dot11 5ghz rssi-check
+no ap dot11 5ghz rssi-threshold
+ap dot11 5ghz rssi-threshold -127
+ap dot11 5ghz rx-sop threshold auto
+no ap lsc-provision
+ap lsc-provision join-attempt 4
+ap lsc-provision key-size 2048
+no ap lsc-provision provision-list
+no ap audit-report enable
+ap audit-report interval 1440
+ap country US
+no ap fra
+ap fra interval 1
+ap fra sensitivity medium
+ap fra sensor-threshold client-priority
+ap fra service-priority coverage
+ap led-brightness 1
+ap neighborhood timer 3600
+ap tri-radio
+no ap auth-list authorize-mac
+no ap auth-list authorize-serialNum
+ap auth-list method-list default
+ap dot15 shutdown
+no ap lag support
+ap dtls-version dtls_all
+ap tag-source-priority 2 source filter
+ap tag-source-priority 3 source ap
+ap profile default-ap-profile
+ antenna monitoring detection-time 12
+ antenna monitoring rssi-failure-threshold 40
+ antenna monitoring weak-rssi -60
+ no apphost
+ auxiliary-client interface vlan-id 0
+ awips
+ no bssid-neighbor-stats
+ bssid-neighbor-stats interval 30
+ no bssid-stats
+ bssid-stats bssid-stats-frequency 30
+ capwap retransmit count 5
+ capwap retransmit interval 3
+ capwap timers discovery-timeout 10
+ capwap timers fast-heartbeat-timeout 0
+ capwap timers heartbeat-timeout 30
+ capwap timers primary-discovery-timeout 120
+ capwap timers primed-join-timeout 0
+ no capwap udplite
+ capwap window size 1
+ capwap fallback
+ capwap-discovery private
+ capwap-discovery public
+ cdp
+ ciphersuite server-preference
+ client-rssi-stats
+ client-rssi-stats interval 30
+ description "default ap profile"
+ no dhcp-server
+ dot11 24ghz reporting-interval 90
+ dot11 5ghz reporting-interval 90
+ dot1x eap-type eap-fast
+ dot1x lsc-ap-auth-state capwap-dtls
+ dot1x max-sessions 0
+ no ext-module
+ no hyperlocation
+ hyperlocation threshold detection -100
+ hyperlocation threshold reset 8
+ hyperlocation threshold trigger 10
+ icap subscription ap statistics dns frequency 30
+ icap subscription ap statistics interface frequency 30
+ icap subscription ap statistics memory frequency 30
+ icap subscription ap statistics radio frequency 30
+ icap subscription ap statistics routing frequency 30
+ icap subscription ap statistics system frequency 30
+ icap subscription ap statistics wlan frequency 30
+ no icap subscription client anomaly-detection report-individual enable
+ icap subscription client anomaly-detection report-individual throttle 100
+ icap subscription client anomaly-detection report-summary frequency 5
+ icap subscription client anomaly-detection timeout dhcp 5
+ icap subscription client statistics filter frequency 5
+ icap subscription client statistics frequency 30
+ ip dhcp fallback
+ no lag
+ led
+ mesh-profile default-mesh-profile
+ mgmtuser username cisco password 0 cisco secret 0 cisco
+ ntp ip 0.0.0.0
+ oeap link-encryption
+ oeap local-access
+ oeap provisioning-ssid
+ no oeap rogue-detection
+ pakseq-jump-delba
+ power injector switch-mac-address 0000.0000.0000
+ preferred-mode disable
+ qos-map trust-dscp-upstream
+ rogue detection enable
+ rogue detection min-rssi -90
+ rogue detection min-transient-time 0
+ rogue detection report-interval 10
+ no ssh
+ no ssid broadcast persistent
+ statistics ap-system-monitoring alarm-hold-time 6
+ statistics ap-system-monitoring alarm-retransmit-time 0
+ statistics ap-system-monitoring cpu-threshold 0
+ statistics ap-system-monitoring mem-threshold 0
+ statistics ap-system-monitoring sampling-interval 30
+ statistics ap-system-monitoring stats-interval 300
+ statistics traffic-distribution
+ statistics traffic-distribution interval 300
+ stats-timer 180
+ syslog facility kern
+ syslog host 255.255.255.255
+ syslog level informational
+ tcp-adjust-mss enable
+ tcp-adjust-mss size 1250
+ no telnet
+ap profile default-ap-profile-fabric
+ antenna monitoring detection-time 12
+ antenna monitoring rssi-failure-threshold 40
+ antenna monitoring weak-rssi -60
+ no apphost
+ auxiliary-client interface vlan-id 0
+ awips
+ no bssid-neighbor-stats
+ bssid-neighbor-stats interval 30
+ no bssid-stats
+ bssid-stats bssid-stats-frequency 30
+ capwap retransmit count 5
+ capwap retransmit interval 3
+ capwap timers discovery-timeout 10
+ capwap timers fast-heartbeat-timeout 0
+ capwap timers heartbeat-timeout 30
+ capwap timers primary-discovery-timeout 120
+ capwap timers primed-join-timeout 0
+ no capwap udplite
+ capwap window size 1
+ capwap fallback
+ capwap-discovery private
+ capwap-discovery public
+ cdp
+ ciphersuite server-preference
+ client-rssi-stats
+ client-rssi-stats interval 30
+ no dhcp-server
+ dot11 24ghz reporting-interval 90
+ dot11 5ghz reporting-interval 90
+ dot1x eap-type eap-fast
+ dot1x lsc-ap-auth-state capwap-dtls
+ dot1x max-sessions 0
+ no ext-module
+ no hyperlocation
+ hyperlocation threshold detection -100
+ hyperlocation threshold reset 8
+ hyperlocation threshold trigger 10
+ icap subscription ap statistics dns frequency 30
+ icap subscription ap statistics interface frequency 30
+ icap subscription ap statistics memory frequency 30
+ icap subscription ap statistics radio frequency 30
+ icap subscription ap statistics routing frequency 30
+ icap subscription ap statistics system frequency 30
+ icap subscription ap statistics wlan frequency 30
+ icap subscription client anomaly-detection report-individual enable
+ icap subscription client anomaly-detection report-individual throttle 5
+ icap subscription client anomaly-detection report-summary frequency 5
+ icap subscription client anomaly-detection timeout dhcp 5
+ icap subscription client statistics filter frequency 5
+ icap subscription client statistics frequency 30
+ ip dhcp fallback
+ no lag
+ led
+ mesh-profile default-mesh-profile
+ mgmtuser username cisco password 0 cisco secret 0 cisco
+ ntp ip 0.0.0.0
+ oeap link-encryption
+ oeap local-access
+ oeap provisioning-ssid
+ no oeap rogue-detection
+ pakseq-jump-delba
+ power injector switch-mac-address 0000.0000.0000
+ preferred-mode disable
+ qos-map trust-dscp-upstream
+ rogue detection enable
+ rogue detection min-rssi -90
+ rogue detection min-transient-time 0
+ rogue detection report-interval 10
+ no ssh
+ no ssid broadcast persistent
+ statistics ap-system-monitoring alarm-hold-time 6
+ statistics ap-system-monitoring alarm-retransmit-time 0
+ statistics ap-system-monitoring cpu-threshold 0
+ statistics ap-system-monitoring mem-threshold 0
+ statistics ap-system-monitoring sampling-interval 30
+ statistics ap-system-monitoring stats-interval 300
+ statistics traffic-distribution
+ statistics traffic-distribution interval 300
+ stats-timer 180
+ syslog facility kern
+ syslog host 255.255.255.255
+ syslog level informational
+ tcp-adjust-mss enable
+ tcp-adjust-mss size 1250
+ no telnet
+ap 5c5a.c7f0.788a
+ policy-tag PT_RTP_Build_Floor1_cae05
+ rf-tag LOW
+ site-tag ST_RTP_Building_daa75_1
+ap 78bc.1adb.c700
+ policy-tag PT_RTP_Build_Floor1_cae05
+ rf-tag LOW
+ site-tag ST_RTP_Building_daa75_1
+ap 78bc.1adb.cb1c
+ policy-tag PT_RTP_Site1_Floor1_cae05
+ rf-tag TYPICAL
+ site-tag ST_RTP_Site1_daa75_0
+ap 78bc.1adb.cdca
+ policy-tag PT_RTP_Site1_Floor1_cae05
+ rf-tag TYPICAL
+ site-tag ST_RTP_Site1_daa75_0
+ap upgrade staggered 15
+trapflags ap crash
+trapflags ap interfaceup
+trapflags ap noradiocards
+trapflags ap register
+trapflags client max-warning-threshold
+netconf-yang
+netconf-yang cisco-ia snmp-trap-control global-forwarding
+netconf-yang cisco-ia auto-sync without-defaults
+no netconf-yang cisco-ia blocking cli-blocking-enabled
+netconf-yang cisco-ia blocking confd-cfg-blocking-enabled
+netconf-yang cisco-ia config-change-delay 0
+netconf-yang cisco-ia init-sync without-defaults
+netconf-yang cisco-ia intelligent-sync
+netconf-yang cisco-ia logging ciaauthd-log-level error
+netconf-yang cisco-ia logging confd-log-level error
+netconf-yang cisco-ia logging nes-log-level error
+netconf-yang cisco-ia logging onep-log-level error
+netconf-yang cisco-ia logging sync-log-level error
+netconf-yang cisco-ia max-diag-messages-saved 30
+netconf-yang cisco-ia message-diag-level 0
+netconf-yang cisco-ia missing-prc-method blacklist
+netconf-yang cisco-ia post-sync-acl-process
+no netconf-yang cisco-ia preserve-paths-enabled
+netconf-yang cisco-ia process-missing-prc
+netconf-yang cisco-ia snmp-community-string private
+no netconf-yang feature candidate-datastore
+netconf-yang feature side-effect-sync
+no netconf-yang ssh port disable
+netconf-yang ssh port 830
+no restconf
+end
