@@ -25,6 +25,35 @@ record wireless avc ipv6 assurance-rtp
 
 wireless profile policy test-yijxi_Global_FL_e08b57c4
  shutdown
+ no 
+flow monitor avc_ipv4_assurance
+exporter avc_exporter
+exporter avc_local_exporter
+cache timeout active 60
+record wireless avc ipv4 assurance
+
+flow monitor avc_ipv6_assurance
+exporter avc_exporter
+exporter avc_local_exporter
+cache timeout active 60
+record wireless avc ipv6 assurance
+
+flow monitor avc_ipv4_assurance_rtp
+exporter avc_exporter
+cache timeout active 60
+record wireless avc ipv4 assurance-rtp
+
+
+flow monitor avc_ipv6_assurance_rtp
+exporter avc_exporter
+cache timeout active 60
+record wireless avc ipv6 assurance-rtp
+
+
+wireless profile policy test-yijxi_Global_FL_e08b57c4
+ shutdown
+ no ipv4 flow monitor avc_basic_monitor input
+ no ipv4 flow monitor avc_basic_monitor output
  ipv4 flow monitor avc_ipv4_assurance input
  ipv4 flow monitor avc_ipv4_assurance output
  ipv4 flow monitor avc_ipv4_assurance_rtp input
