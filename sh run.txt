@@ -1,8 +1,8 @@
 Building configuration...
-Current configuration : 57816 bytes
+Current configuration : 58051 bytes
 !
-! Last configuration change at 07:37:54 UTC Tue Oct 25 2022 by dnacadmin
-! NVRAM config last updated at 07:37:54 UTC Tue Oct 25 2022 by NETCONF
+! Last configuration change at 07:56:03 UTC Tue Oct 25 2022 by dnacadmin
+! NVRAM config last updated at 07:56:01 UTC Tue Oct 25 2022 by dnacadmin
 !
 version 17.6
 service timestamps debug datetime msec
@@ -104,13 +104,6 @@ flow exporter avc_exporter
 !
 flow exporter avc_local_exporter
  destination local wlc
-!
-!
-flow monitor avc_basic_monitor
- exporter avc_exporter
- exporter avc_local_exporter
- cache timeout active 60
- record wireless avc basic
 !
 !
 flow monitor avc_ipv4_assurance
@@ -1422,6 +1415,14 @@ wireless profile policy test-yijxi_Global_NF_6d2f2709
  exclusionlist timeout 180
  http-tlv-caching
  ip nbar protocol-discovery
+ ipv4 flow monitor avc_ipv4_assurance input
+ ipv4 flow monitor avc_ipv4_assurance_rtp input
+ ipv4 flow monitor avc_ipv4_assurance output
+ ipv4 flow monitor avc_ipv4_assurance_rtp output
+ ipv6 flow monitor avc_ipv6_assurance input
+ ipv6 flow monitor avc_ipv6_assurance_rtp input
+ ipv6 flow monitor avc_ipv6_assurance output
+ ipv6 flow monitor avc_ipv6_assurance_rtp output
  no shutdown
 wireless tag site default-site-tag
  description "default site tag"
