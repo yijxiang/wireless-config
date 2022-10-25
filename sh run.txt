@@ -1,7 +1,7 @@
 Building configuration...
-Current configuration : 57102 bytes
+Current configuration : 57631 bytes
 !
-! Last configuration change at 10:24:45 UTC Mon Oct 24 2022 by dnacadmin
+! Last configuration change at 06:34:45 UTC Tue Oct 25 2022 by admin
 ! NVRAM config last updated at 10:25:07 UTC Mon Oct 24 2022 by NETCONF
 !
 version 17.6
@@ -101,6 +101,32 @@ flow monitor avc_basic_monitor
  exporter avc_local_exporter
  cache timeout active 60
  record wireless avc basic
+!
+!
+flow monitor avc_ipv4_assurance
+ exporter avc_exporter
+ exporter avc_local_exporter
+ cache timeout active 60
+ record wireless avc ipv4 assurance
+!
+!
+flow monitor avc_ipv6_assurance
+ exporter avc_exporter
+ exporter avc_local_exporter
+ cache timeout active 60
+ record wireless avc ipv6 assurance
+!
+!
+flow monitor avc_ipv4_assurance_rtp
+ exporter avc_exporter
+ cache timeout active 60
+ record wireless avc ipv4 assurance-rtp
+!
+!
+flow monitor avc_ipv6_assurance_rtp
+ exporter avc_exporter
+ cache timeout active 60
+ record wireless avc ipv6 assurance-rtp
 !
 multilink bundle-name authenticated
 !
@@ -1383,7 +1409,6 @@ wireless profile policy Guest-jlaf_Global_F_3ff65234
  service-policy output silver
 wireless profile policy test-yijxi_Global_FL_e08b57c4
  aaa-override
- autoqos mode fastlane
  no central association
  no central dhcp
  no central switching
@@ -1391,8 +1416,8 @@ wireless profile policy test-yijxi_Global_FL_e08b57c4
  dhcp-tlv-caching
  exclusionlist timeout 180
  http-tlv-caching
- ipv4 flow monitor avc_basic_monitor input
- ipv4 flow monitor avc_basic_monitor output
+ ipv4 flow monitor avc_ipv4_assurance input
+ ipv4 flow monitor avc_ipv4_assurance output
  vlan Clients
  no shutdown
 wireless tag site default-site-tag
