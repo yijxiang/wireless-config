@@ -1,0 +1,4 @@
+# ipv4 flow monitor avc_ipv4_assurance_rtp input
+% node-1:dbm:wireless:When policy profile is not in local mode, at most 1 IPv4 input flow monitor can be configured
+
+# ipv4 flow monitor avc_ipv4_assurance_rtp output
