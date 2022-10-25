@@ -1,8 +1,8 @@
 Building configuration...
-Current configuration : 58051 bytes
+Current configuration : 60605 bytes
 !
-! Last configuration change at 07:56:03 UTC Tue Oct 25 2022 by dnacadmin
-! NVRAM config last updated at 07:56:01 UTC Tue Oct 25 2022 by dnacadmin
+! Last configuration change at 08:15:31 UTC Tue Oct 25 2022 by dnacadmin
+! NVRAM config last updated at 08:15:31 UTC Tue Oct 25 2022 by NETCONF
 !
 version 17.6
 service timestamps debug datetime msec
@@ -473,6 +473,32 @@ redundancy
 vlan internal allocation policy ascending
 !
 !
+class-map match-all test-yijxi_VOICE_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class voip-telephony
+class-map match-all test-yijxi_MM_CONF_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class multimedia-conferencing
+class-map match-all test-yijxi_SIGNALING_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class signaling
+class-map match-all test-yijxi_BROADCAST_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class broadcast-video
+class-map match-all test-yijxi_BULK_DATA_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class bulk-data
+class-map match-all test-yijxi_SCAVENGER_078e26e9
+ match protocol attribute business-relevance business-irrelevant
+class-map match-all test-yijxi_MM_STREAM_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class multimedia-streaming
+class-map match-all test-yijxi_OAM_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class ops-admin-mgmt
+class-map match-all test-yijxi_CONTROL_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class network-control
 class-map match-any AVC-Reanchor-Class
  match protocol cisco-jabber-audio
  match protocol cisco-jabber-video
@@ -481,6 +507,39 @@ class-map match-any AVC-Reanchor-Class
  match protocol webex-control
  match protocol webex-meeting
  match protocol wifi-calling
+class-map match-all test-yijxi_TRANS_DATA_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class transactional-data
+class-map match-all test-yijxi_REALTIME_078e26e9
+ match protocol attribute business-relevance business-relevant
+ match protocol attribute traffic-class real-time-interactive
+!
+!
+policy-map test-yijxi_DNA-MARKING_078e26e9
+ class test-yijxi_VOICE_078e26e9
+  set dscp ef
+ class test-yijxi_TRANS_DATA_078e26e9
+  set dscp af21
+ class test-yijxi_SCAVENGER_078e26e9
+  set dscp cs1
+ class test-yijxi_REALTIME_078e26e9
+  set dscp cs4
+ class test-yijxi_MM_STREAM_078e26e9
+  set dscp af31
+ class test-yijxi_BROADCAST_078e26e9
+  set dscp cs5
+ class test-yijxi_OAM_078e26e9
+  set dscp cs2
+ class test-yijxi_SIGNALING_078e26e9
+  set dscp cs3
+ class test-yijxi_MM_CONF_078e26e9
+  set dscp af41
+ class test-yijxi_CONTROL_078e26e9
+  set dscp cs6
+ class test-yijxi_BULK_DATA_078e26e9
+  set dscp af11
+ class class-default
+  set dscp default
 !
 ! 
 !
@@ -1423,6 +1482,8 @@ wireless profile policy test-yijxi_Global_NF_6d2f2709
  ipv6 flow monitor avc_ipv6_assurance_rtp input
  ipv6 flow monitor avc_ipv6_assurance output
  ipv6 flow monitor avc_ipv6_assurance_rtp output
+ service-policy input test-yijxi_DNA-MARKING_078e26e9
+ service-policy output test-yijxi_DNA-MARKING_078e26e9
  no shutdown
 wireless tag site default-site-tag
  description "default site tag"
