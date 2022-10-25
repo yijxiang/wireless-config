@@ -2,3 +2,28 @@
 % node-1:dbm:wireless:When policy profile is not in local mode, at most 1 IPv4 input flow monitor can be configured
 
 # ipv4 flow monitor avc_ipv4_assurance_rtp output
+
+
+
+
+### new config
+
+no wireless profile policy test-yijxi_Global_FL_e08b57c4
+ 
+ wireless profile policy test-yijxi_Global_FL_e08b57c4
+  aaa-override
+  autoqos mode fastlane
+  no central association
+  no central dhcp
+  no central switching
+  description test-yijxi_Global_FL_e08b57c4
+  dhcp-tlv-caching
+  exclusionlist timeout 180
+  http-tlv-caching
+ ipv4 flow monitor avc_ipv4_assurance input
+ ipv4 flow monitor avc_ipv4_assurance output
+ ipv4 flow monitor avc_ipv4_assurance_rtp input
+ ipv4 flow monitor avc_ipv4_assurance_rtp output
+  vlan Clients
+  no shutdown
+  
