@@ -1,8 +1,8 @@
 Building configuration...
-Current configuration : 57563 bytes
+Current configuration : 57816 bytes
 !
-! Last configuration change at 07:11:14 UTC Tue Oct 25 2022 by dnacadmin
-! NVRAM config last updated at 07:11:34 UTC Tue Oct 25 2022 by NETCONF
+! Last configuration change at 07:37:54 UTC Tue Oct 25 2022 by dnacadmin
+! NVRAM config last updated at 07:37:54 UTC Tue Oct 25 2022 by NETCONF
 !
 version 17.6
 service timestamps debug datetime msec
@@ -72,6 +72,16 @@ subscriber templating
 ! 
 ! 
 ! 
+!
+avc sd-service
+ segment AppRecognition
+ controller
+  address 198.18.129.100 
+  destination-ports sensor-exporter 21730
+  dscp 16
+  source-interface GigabitEthernet1
+  transport application-updates https url-prefix sdavc
+ !
 !
 !
 access-session mac-move deny
@@ -1411,6 +1421,7 @@ wireless profile policy test-yijxi_Global_NF_6d2f2709
  dhcp-tlv-caching
  exclusionlist timeout 180
  http-tlv-caching
+ ip nbar protocol-discovery
  no shutdown
 wireless tag site default-site-tag
  description "default site tag"
