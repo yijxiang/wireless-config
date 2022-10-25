@@ -1,8 +1,8 @@
 Building configuration...
-Current configuration : 57631 bytes
+Current configuration : 57563 bytes
 !
-! Last configuration change at 06:34:45 UTC Tue Oct 25 2022 by admin
-! NVRAM config last updated at 10:25:07 UTC Mon Oct 24 2022 by NETCONF
+! Last configuration change at 06:58:19 UTC Tue Oct 25 2022 by dnacadmin
+! NVRAM config last updated at 06:58:27 UTC Tue Oct 25 2022 by NETCONF
 !
 version 17.6
 service timestamps debug datetime msec
@@ -468,9 +468,6 @@ redundancy
 !
 !
 vlan internal allocation policy ascending
-!
-vlan 119
- name Clients
 !
 !
 class-map match-any AVC-Reanchor-Class
@@ -1407,18 +1404,13 @@ wireless profile policy Guest-jlaf_Global_F_3ff65234
  nac
  service-policy input silver-up
  service-policy output silver
-wireless profile policy test-yijxi_Global_FL_e08b57c4
+wireless profile policy test-yijxi_Global_NF_6d2f2709
  aaa-override
- no central association
- no central dhcp
- no central switching
- description test-yijxi_Global_FL_e08b57c4
+ autoqos mode fastlane
+ description test-yijxi_Global_NF_6d2f2709
  dhcp-tlv-caching
  exclusionlist timeout 180
  http-tlv-caching
- ipv4 flow monitor avc_ipv4_assurance input
- ipv4 flow monitor avc_ipv4_assurance output
- vlan Clients
  no shutdown
 wireless tag site default-site-tag
  description "default site tag"
@@ -1430,6 +1422,8 @@ wireless tag site ST_RTP_Building_daa75_0
  description "Site Tag ST_RTP_Building_daa75_0"
  flex-profile FP_RTP_Build_daa75
  no local-site
+wireless tag site ST_RTP_Building_daa75_1
+ description "Site Tag ST_RTP_Building_daa75_1"
 wireless tag site default-site-tag-fabric
  description "Site Tag default-site-tag-fabric"
 wireless tag policy default-policy-tag
@@ -1440,7 +1434,7 @@ wireless tag policy PT_RTP_Build_Floor1_5a1d4
  wlan Guest-jlaf_Global_F_3ff65234 policy Guest-jlaf_Global_F_3ff65234
 wireless tag policy PT_RTP_Build_Floor1_cae05
  description "PolicyTagName PT_RTP_Build_Floor1_cae05"
- wlan test-yijxi_Global_FL_e08b57c4 policy test-yijxi_Global_FL_e08b57c4
+ wlan test-yijxi_Global_NF_6d2f2709 policy test-yijxi_Global_NF_6d2f2709
 wireless tag policy PT_RTP_Site1_Floor1_cae05
  description "PolicyTagName PT_RTP_Site1_Floor1_cae05"
  wlan GuestNet1_Global_F_41d982bd policy GuestNet1_Global_F_41d982bd
@@ -1455,7 +1449,7 @@ wireless wps mfp
 wireless wps mfp ap-impersonation
 wireless fabric control-plane default-control-plane
 wireless country US
-wlan test-yijxi_Global_FL_e08b57c4 17 test-yijxiang
+wlan test-yijxi_Global_NF_6d2f2709 18 test-yijxiang-local
  security ft over-the-ds
  security wpa psk set-key ascii 0 cisco12345
  no security wpa akm dot1x
@@ -1551,11 +1545,11 @@ ap profile default-ap-profile-fabric
 ap 5c5a.c7f0.788a
  policy-tag PT_RTP_Build_Floor1_cae05
  rf-tag LOW
- site-tag ST_RTP_Building_daa75_0
+ site-tag ST_RTP_Building_daa75_1
 ap 78bc.1adb.c700
  policy-tag PT_RTP_Build_Floor1_cae05
  rf-tag LOW
- site-tag ST_RTP_Building_daa75_0
+ site-tag ST_RTP_Building_daa75_1
 ap 78bc.1adb.cb1c
  policy-tag PT_RTP_Site1_Floor1_cae05
  rf-tag TYPICAL
