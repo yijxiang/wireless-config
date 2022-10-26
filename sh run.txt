@@ -1,8 +1,8 @@
 Building configuration...
-Current configuration : 60605 bytes
+Current configuration : 61454 bytes
 !
-! Last configuration change at 08:15:31 UTC Tue Oct 25 2022 by dnacadmin
-! NVRAM config last updated at 08:29:42 UTC Tue Oct 25 2022 by NETCONF
+! Last configuration change at 13:39:24 UTC Tue Oct 25 2022 by dnacadmin
+! NVRAM config last updated at 08:46:58 UTC Wed Oct 26 2022 by NETCONF
 !
 version 17.6
 service timestamps debug datetime msec
@@ -471,6 +471,9 @@ redundancy
 !
 !
 vlan internal allocation policy ascending
+!
+vlan 119
+ name Clients
 !
 !
 class-map match-all test-yijxi_VOICE_078e26e9
@@ -1420,6 +1423,14 @@ wireless cts-sxp profile default-sxp-profile
 wireless management trustpoint C9800-WLC_WLC_TP
 wireless management interface GigabitEthernet1
 wireless profile airtime-fairness default-atf-policy 0
+wireless profile flex FP_RTP_Build_28e93
+ no arp-caching
+ description "Flex Profile FP_RTP_Build_28e93"
+ ip http client proxy 0.0.0.0 8080
+ local-auth radius-server-group default
+ native-vlan-id 119
+ vlan-name Clients
+  vlan-id 119
 wireless profile flex FP_RTP_Build_daa75
  no arp-caching
  description "Flex Profile FP_RTP_Build_daa75"
@@ -1466,6 +1477,18 @@ wireless profile policy Guest-jlaf_Global_F_3ff65234
  nac
  service-policy input silver-up
  service-policy output silver
+wireless profile policy test-yijxi_Global_FL_e08b57c4
+ aaa-override
+ autoqos mode fastlane
+ no central association
+ no central dhcp
+ no central switching
+ description test-yijxi_Global_FL_e08b57c4
+ dhcp-tlv-caching
+ exclusionlist timeout 180
+ http-tlv-caching
+ vlan Clients
+ no shutdown
 wireless profile policy test-yijxi_Global_NF_6d2f2709
  aaa-override
  autoqos mode fastlane
@@ -1491,6 +1514,8 @@ wireless tag site ST_RTP_Site1_daa75_0
  description "Site Tag ST_RTP_Site1_daa75_0"
 wireless tag site ST_RTP_Building_28e93_0
  description "Site Tag ST_RTP_Building_28e93_0"
+ flex-profile FP_RTP_Build_28e93
+ no local-site
 wireless tag site ST_RTP_Building_daa75_0
  description "Site Tag ST_RTP_Building_daa75_0"
  flex-profile FP_RTP_Build_daa75
@@ -1505,6 +1530,7 @@ wireless tag policy PT_RTP_Build_Floor1_5a1d4
  description "PolicyTagName PT_RTP_Build_Floor1_5a1d4"
  wlan Enterprise_Global_F_6e3e06f9 policy Enterprise_Global_F_6e3e06f9
  wlan Guest-jlaf_Global_F_3ff65234 policy Guest-jlaf_Global_F_3ff65234
+ wlan test-yijxi_Global_FL_e08b57c4 policy test-yijxi_Global_FL_e08b57c4
 wireless tag policy PT_RTP_Build_Floor1_cae05
  description "PolicyTagName PT_RTP_Build_Floor1_cae05"
  wlan test-yijxi_Global_NF_6d2f2709 policy test-yijxi_Global_NF_6d2f2709
@@ -1522,6 +1548,12 @@ wireless wps mfp
 wireless wps mfp ap-impersonation
 wireless fabric control-plane default-control-plane
 wireless country US
+wlan test-yijxi_Global_FL_e08b57c4 17 test-yijxiang
+ security ft over-the-ds
+ security wpa psk set-key ascii 0 cisco12345
+ no security wpa akm dot1x
+ security wpa akm psk
+ no shutdown
 wlan test-yijxi_Global_NF_6d2f2709 18 test-yijxiang-local
  security ft over-the-ds
  security wpa psk set-key ascii 0 cisco12345
@@ -1620,9 +1652,9 @@ ap 5c5a.c7f0.788a
  rf-tag LOW
  site-tag ST_RTP_Building_daa75_1
 ap 78bc.1adb.c700
- policy-tag PT_RTP_Build_Floor1_cae05
+ policy-tag PT_RTP_Build_Floor1_5a1d4
  rf-tag LOW
- site-tag ST_RTP_Building_daa75_1
+ site-tag ST_RTP_Building_28e93_0
 ap 78bc.1adb.cb1c
  policy-tag PT_RTP_Site1_Floor1_cae05
  rf-tag TYPICAL
