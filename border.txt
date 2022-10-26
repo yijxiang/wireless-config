@@ -1,6 +1,6 @@
 
 !
-! Last configuration change at 01:16:04 UTC Wed Oct 26 2022
+! Last configuration change at 01:58:47 UTC Wed Oct 26 2022 by dnacadmin
 !
 version 17.6
 service timestamps debug datetime msec
@@ -41,6 +41,9 @@ switch 1 provision c9300-24u
 ip routing
 !
 !
+ip nbar http-services
+!
+!
 !
 !
 !
@@ -58,6 +61,16 @@ login on-success log
 !
 vtp domain ciscodna
 vtp mode transparent
+avc sd-service
+ segment AppRecognition
+ controller
+  address 198.18.129.100 
+  destination-ports sensor-exporter 21730
+  dscp 16
+  source-interface Loopback0
+  transport application-updates https url-prefix sdavc
+ !
+!
 device-tracking tracking
 !
 device-tracking policy IPDT_POLICY
@@ -356,6 +369,7 @@ interface GigabitEthernet1/0/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/2
  device-tracking attach-policy IPDT_POLICY
@@ -363,6 +377,7 @@ interface GigabitEthernet1/0/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/3
  device-tracking attach-policy IPDT_POLICY
@@ -370,6 +385,7 @@ interface GigabitEthernet1/0/3
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/4
  device-tracking attach-policy IPDT_POLICY
@@ -377,6 +393,7 @@ interface GigabitEthernet1/0/4
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/5
  device-tracking attach-policy IPDT_POLICY
@@ -384,6 +401,7 @@ interface GigabitEthernet1/0/5
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/6
  device-tracking attach-policy IPDT_POLICY
@@ -391,6 +409,7 @@ interface GigabitEthernet1/0/6
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/7
  device-tracking attach-policy IPDT_POLICY
@@ -398,6 +417,7 @@ interface GigabitEthernet1/0/7
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/8
  device-tracking attach-policy IPDT_POLICY
@@ -405,6 +425,7 @@ interface GigabitEthernet1/0/8
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/9
  device-tracking attach-policy IPDT_POLICY
@@ -412,6 +433,7 @@ interface GigabitEthernet1/0/9
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/10
  device-tracking attach-policy IPDT_POLICY
@@ -419,6 +441,7 @@ interface GigabitEthernet1/0/10
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/11
  device-tracking attach-policy IPDT_POLICY
@@ -426,6 +449,7 @@ interface GigabitEthernet1/0/11
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/12
  device-tracking attach-policy IPDT_POLICY
@@ -433,6 +457,7 @@ interface GigabitEthernet1/0/12
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/13
  device-tracking attach-policy IPDT_POLICY
@@ -440,6 +465,7 @@ interface GigabitEthernet1/0/13
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/14
  device-tracking attach-policy IPDT_POLICY
@@ -447,6 +473,7 @@ interface GigabitEthernet1/0/14
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/15
  device-tracking attach-policy IPDT_POLICY
@@ -454,6 +481,7 @@ interface GigabitEthernet1/0/15
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/16
  device-tracking attach-policy IPDT_POLICY
@@ -461,6 +489,7 @@ interface GigabitEthernet1/0/16
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/17
  device-tracking attach-policy IPDT_POLICY
@@ -468,6 +497,7 @@ interface GigabitEthernet1/0/17
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/18
  description trunk to Edge2
@@ -503,6 +533,7 @@ interface GigabitEthernet1/0/24
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/1
  device-tracking attach-policy IPDT_POLICY
@@ -510,6 +541,7 @@ interface GigabitEthernet1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/2
  device-tracking attach-policy IPDT_POLICY
@@ -517,6 +549,7 @@ interface GigabitEthernet1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/3
  device-tracking attach-policy IPDT_POLICY
@@ -524,6 +557,7 @@ interface GigabitEthernet1/1/3
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/4
  device-tracking attach-policy IPDT_POLICY
@@ -531,6 +565,7 @@ interface GigabitEthernet1/1/4
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/1
  device-tracking attach-policy IPDT_POLICY
@@ -538,6 +573,7 @@ interface TenGigabitEthernet1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/2
  device-tracking attach-policy IPDT_POLICY
@@ -545,6 +581,7 @@ interface TenGigabitEthernet1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/3
  device-tracking attach-policy IPDT_POLICY
@@ -552,6 +589,7 @@ interface TenGigabitEthernet1/1/3
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/4
  device-tracking attach-policy IPDT_POLICY
@@ -559,6 +597,7 @@ interface TenGigabitEthernet1/1/4
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/5
  device-tracking attach-policy IPDT_POLICY
@@ -566,6 +605,7 @@ interface TenGigabitEthernet1/1/5
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/6
  device-tracking attach-policy IPDT_POLICY
@@ -573,6 +613,7 @@ interface TenGigabitEthernet1/1/6
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/7
  device-tracking attach-policy IPDT_POLICY
@@ -580,6 +621,7 @@ interface TenGigabitEthernet1/1/7
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/8
  device-tracking attach-policy IPDT_POLICY
@@ -587,6 +629,7 @@ interface TenGigabitEthernet1/1/8
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface FortyGigabitEthernet1/1/1
  device-tracking attach-policy IPDT_POLICY
@@ -594,6 +637,7 @@ interface FortyGigabitEthernet1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface FortyGigabitEthernet1/1/2
  device-tracking attach-policy IPDT_POLICY
@@ -601,6 +645,7 @@ interface FortyGigabitEthernet1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TwentyFiveGigE1/1/1
  device-tracking attach-policy IPDT_POLICY
@@ -608,6 +653,7 @@ interface TwentyFiveGigE1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface TwentyFiveGigE1/1/2
  device-tracking attach-policy IPDT_POLICY
@@ -615,6 +661,7 @@ interface TwentyFiveGigE1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ ip nbar protocol-discovery
 !
 interface AppGigabitEthernet1/0/1
 !
