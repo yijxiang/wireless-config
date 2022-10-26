@@ -1,6 +1,6 @@
 
 !
-! Last configuration change at 01:58:47 UTC Wed Oct 26 2022 by dnacadmin
+! Last configuration change at 03:46:59 UTC Wed Oct 26 2022 by dnacadmin
 !
 version 17.6
 service timestamps debug datetime msec
@@ -301,31 +301,94 @@ class-map match-any system-cpp-police-topology-control
   description Topology control
 class-map match-any system-cpp-police-sw-forward
   description Sw forwarding, L2 LVX data packets, LOGGING, Transit Traffic
+class-map match-any DNA-MARKING_IN#REALTIME_CUSTOM
+class-map match-all DNA-MARKING_IN#MM_STREAM
+ match protocol attribute traffic-class multimedia-streaming
+ match protocol attribute business-relevance business-relevant
+class-map match-all DNA-MARKING_IN#OAM
+ match protocol attribute traffic-class ops-admin-mgmt
+ match protocol attribute business-relevance business-relevant
 class-map match-any system-cpp-default
   description EWLC Data, Inter FED Traffic 
+class-map match-all DNA-MARKING_IN#CONTROL
+ match protocol attribute traffic-class network-control
+ match protocol attribute business-relevance business-relevant
+class-map match-any DNA-MARKING_IN#TRANS_DATA_CUSTOM
 class-map match-any system-cpp-police-sys-data
   description Openflow, Exception, EGR Exception, NFL Sampled Data, RPF Failed
+class-map match-all DNA-MARKING_IN#MM_CONF
+ match protocol attribute traffic-class multimedia-conferencing
+ match protocol attribute business-relevance business-relevant
+class-map match-all DNA-MARKING_IN#SCAVENGER
+ match protocol attribute business-relevance business-irrelevant
+class-map match-all DNA-MARKING_IN#SIGNALING
+ match protocol attribute traffic-class signaling
+ match protocol attribute business-relevance business-relevant
+class-map match-all DNA-MARKING_IN#BROADCAST
+ match protocol attribute traffic-class broadcast-video
+ match protocol attribute business-relevance business-relevant
+class-map match-all DNA-MARKING_IN#BULK_DATA
+ match protocol attribute traffic-class bulk-data
+ match protocol attribute business-relevance business-relevant
 class-map match-any system-cpp-police-punt-webauth
   description Punt Webauth
+class-map match-all DNA-MARKING_IN#VOICE
+ match protocol attribute traffic-class voip-telephony
+ match protocol attribute business-relevance business-relevant
 class-map match-any system-cpp-police-l2lvx-control
   description L2 LVX control packets
 class-map match-any system-cpp-police-forus
   description Forus Address resolution and Forus traffic
+class-map match-any DNA-EZQOS_2P6Q3T_9K#BULK-DATA
+ match dscp cs1 
+ match dscp af12 
+ match dscp af13 
+ match dscp af11 
 class-map match-any system-cpp-police-multicast-end-station
   description MCAST END STATION
 class-map match-any system-cpp-police-high-rate-app
   description High Rate Applications 
 class-map match-any system-cpp-police-multicast
   description MCAST Data
+class-map match-any DNA-EZQOS_2P6Q3T_9K#CONTROL-PLANE
+ match dscp cs3 
+ match dscp cs2 
+ match dscp cs7 
+ match dscp cs6 
+class-map match-any DNA-EZQOS_2P6Q3T_9K#MULTIMEDIA-CONFERENCING
+ match dscp af43 
+ match dscp af41 
+ match dscp af42 
 class-map match-any system-cpp-police-l2-control
   description L2 control
+class-map match-any DNA-MARKING_IN#CONTROL_CUSTOM
 class-map match-any system-cpp-police-dot1x-auth
   description DOT1X Auth
 class-map match-any system-cpp-police-data
   description ICMP redirect, ICMP_GEN and BROADCAST
+class-map match-any DNA-MARKING_IN#MM_STREAM_CUSTOM
+class-map match-any DNA-MARKING_IN#OAM_CUSTOM
+ match access-group name DNA-MARKING_IN#OAM_CUSTOM__acl
+class-map match-all DNA-MARKING_IN#REALTIME
+ match protocol attribute traffic-class real-time-interactive
+ match protocol attribute business-relevance business-relevant
+class-map match-any DNA-EZQOS_2P6Q3T_9K#VIDEO-PQ2
+ match dscp cs5 
+ match dscp cs4 
+class-map match-any DNA-EZQOS_2P6Q3T_9K#VOICE-PQ1
+ match dscp ef 
 class-map match-any system-cpp-police-stackwise-virt-control
   description Stackwise Virtual OOB
+class-map match-any DNA-MARKING_IN#VOICE_CUSTOM
+class-map match-any DNA-MARKING_IN#SCAVENGER_CUSTOM
+class-map match-any DNA-MARKING_IN#SIGNALING_CUSTOM
+class-map match-any DNA-MARKING_IN#BROADCAST_CUSTOM
+class-map match-any DNA-MARKING_IN#BULK_DATA_CUSTOM
 class-map match-any non-client-nrt-class
+class-map match-all DNA-MARKING_IN#TRANS_DATA
+ match protocol attribute traffic-class transactional-data
+ match protocol attribute business-relevance business-relevant
+class-map match-any DNA-MARKING_IN#MM_CONF_CUSTOM
 class-map match-any system-cpp-police-routing-control
   description Routing control and Low Latency
 class-map match-any system-cpp-police-protocol-snooping
@@ -334,12 +397,113 @@ class-map match-any system-cpp-police-dhcp-snooping
   description DHCP snooping
 class-map match-any system-cpp-police-ios-routing
   description L2 control, Topology control, Routing control, Low Latency
+class-map match-any DNA-MARKING_IN#TUNNELED-NBAR
+ match access-group name DNA-MARKING_IN#TUNNELED-NBAR__acl
+class-map match-any DNA-EZQOS_2P6Q3T_9K#TRANSACTIONAL-DATA
+ match dscp af23 
+ match dscp af21 
+ match dscp af22 
 class-map match-any system-cpp-police-system-critical
   description System Critical and Gold Pkt
 class-map match-any system-cpp-police-ios-feature
   description ICMPGEN,BROADCAST,ICMP,L2LVXCntrl,ProtoSnoop,PuntWebauth,MCASTData,Transit,DOT1XAuth,Swfwd,LOGGING,L2LVXData,ForusTraffic,ForusARP,McastEndStn,Openflow,Exception,EGRExcption,NflSampled,RpfFailed
+class-map match-any DNA-EZQOS_2P6Q3T_9K#MULTIMEDIA-STREAMING
+ match dscp af32 
+ match dscp af33 
+ match dscp af31 
 !
 policy-map system-cpp-policy
+policy-map DNA-dscp#APIC_QOS_Q_OUT
+ class DNA-EZQOS_2P6Q3T_9K#VOICE-PQ1
+  priority level 1
+  police rate percent 6
+  queue-buffers ratio 15
+ class DNA-EZQOS_2P6Q3T_9K#VIDEO-PQ2
+  priority level 2
+  police rate percent 27
+  queue-buffers ratio 10
+ class DNA-EZQOS_2P6Q3T_9K#CONTROL-PLANE
+  bandwidth remaining percent 10 
+  queue-buffers ratio 10
+ class DNA-EZQOS_2P6Q3T_9K#MULTIMEDIA-CONFERENCING
+  bandwidth remaining percent 15 
+  queue-buffers ratio 10
+  queue-limit dscp af41 percent 100
+  queue-limit dscp af42 percent 90
+  queue-limit dscp af43 percent 80
+ class DNA-EZQOS_2P6Q3T_9K#MULTIMEDIA-STREAMING
+  bandwidth remaining percent 15 
+  queue-buffers ratio 10
+  queue-limit dscp af32 percent 90
+  queue-limit dscp af33 percent 80
+ class DNA-EZQOS_2P6Q3T_9K#TRANSACTIONAL-DATA
+  bandwidth remaining percent 15 
+  queue-buffers ratio 10
+  random-detect dscp-based
+  random-detect dscp 18 percent 80 100
+  random-detect dscp 20 percent 70 100
+  random-detect dscp 22 percent 60 100
+ class DNA-EZQOS_2P6Q3T_9K#BULK-DATA
+  bandwidth remaining percent 7 
+  queue-buffers ratio 10
+  random-detect dscp-based
+  random-detect dscp 8 percent 60 100
+  random-detect dscp 10 percent 80 100
+  random-detect dscp 12 percent 70 100
+  random-detect dscp 14 percent 60 100
+ class class-default
+  bandwidth remaining percent 38 
+  queue-buffers ratio 25
+  random-detect dscp-based
+  random-detect dscp 0 percent 80 100
+policy-map DNA-MARKING_IN
+ class DNA-MARKING_IN#TUNNELED-NBAR
+ class DNA-MARKING_IN#VOICE_CUSTOM
+  set dscp ef
+ class DNA-MARKING_IN#BROADCAST_CUSTOM
+  set dscp cs5
+ class DNA-MARKING_IN#REALTIME_CUSTOM
+  set dscp cs4
+ class DNA-MARKING_IN#MM_CONF_CUSTOM
+  set dscp af41
+ class DNA-MARKING_IN#MM_STREAM_CUSTOM
+  set dscp af31
+ class DNA-MARKING_IN#CONTROL_CUSTOM
+  set dscp cs6
+ class DNA-MARKING_IN#SIGNALING_CUSTOM
+  set dscp cs3
+ class DNA-MARKING_IN#OAM_CUSTOM
+  set dscp cs2
+ class DNA-MARKING_IN#TRANS_DATA_CUSTOM
+  set dscp af21
+ class DNA-MARKING_IN#BULK_DATA_CUSTOM
+  set dscp af11
+ class DNA-MARKING_IN#SCAVENGER_CUSTOM
+  set dscp cs1
+ class DNA-MARKING_IN#VOICE
+  set dscp ef
+ class DNA-MARKING_IN#BROADCAST
+  set dscp cs5
+ class DNA-MARKING_IN#REALTIME
+  set dscp cs4
+ class DNA-MARKING_IN#MM_CONF
+  set dscp af41
+ class DNA-MARKING_IN#MM_STREAM
+  set dscp af31
+ class DNA-MARKING_IN#CONTROL
+  set dscp cs6
+ class DNA-MARKING_IN#SIGNALING
+  set dscp cs3
+ class DNA-MARKING_IN#OAM
+  set dscp cs2
+ class DNA-MARKING_IN#TRANS_DATA
+  set dscp af21
+ class DNA-MARKING_IN#BULK_DATA
+  set dscp af11
+ class DNA-MARKING_IN#SCAVENGER
+  set dscp cs1
+ class class-default
+  set dscp default
 !
 ! 
 !
@@ -369,6 +533,8 @@ interface GigabitEthernet1/0/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/2
@@ -377,6 +543,8 @@ interface GigabitEthernet1/0/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/3
@@ -385,6 +553,8 @@ interface GigabitEthernet1/0/3
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/4
@@ -393,6 +563,8 @@ interface GigabitEthernet1/0/4
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/5
@@ -401,6 +573,8 @@ interface GigabitEthernet1/0/5
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/6
@@ -409,6 +583,8 @@ interface GigabitEthernet1/0/6
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/7
@@ -417,6 +593,8 @@ interface GigabitEthernet1/0/7
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/8
@@ -425,6 +603,8 @@ interface GigabitEthernet1/0/8
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/9
@@ -433,6 +613,8 @@ interface GigabitEthernet1/0/9
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/10
@@ -441,6 +623,8 @@ interface GigabitEthernet1/0/10
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/11
@@ -449,6 +633,8 @@ interface GigabitEthernet1/0/11
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/12
@@ -457,6 +643,8 @@ interface GigabitEthernet1/0/12
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/13
@@ -465,6 +653,8 @@ interface GigabitEthernet1/0/13
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/14
@@ -473,6 +663,8 @@ interface GigabitEthernet1/0/14
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/15
@@ -481,6 +673,8 @@ interface GigabitEthernet1/0/15
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/16
@@ -489,6 +683,8 @@ interface GigabitEthernet1/0/16
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/17
@@ -497,35 +693,43 @@ interface GigabitEthernet1/0/17
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/0/18
  description trunk to Edge2
  switchport trunk allowed vlan 21,119,120
  switchport mode trunk
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
 !
 interface GigabitEthernet1/0/19
  description trunk to Edge2
  switchport trunk allowed vlan 21,119,120
  switchport mode trunk
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
 !
 interface GigabitEthernet1/0/20
  description trunk to edge1
  switchport trunk allowed vlan 21,119,120
  switchport mode trunk
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
 !
 interface GigabitEthernet1/0/21
  description trunk to edge1
  switchport trunk allowed vlan 21,119,120
  switchport mode trunk
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
 !
 interface GigabitEthernet1/0/22
  description Border_to_Fusion_g1/0/22
  switchport mode trunk
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
 !
 interface GigabitEthernet1/0/23
  description Border_to_Fusion_g1/0/23
  switchport mode trunk
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
 !
 interface GigabitEthernet1/0/24
  device-tracking attach-policy IPDT_POLICY
@@ -533,6 +737,8 @@ interface GigabitEthernet1/0/24
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/1
@@ -541,6 +747,8 @@ interface GigabitEthernet1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/2
@@ -549,6 +757,8 @@ interface GigabitEthernet1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/3
@@ -557,6 +767,8 @@ interface GigabitEthernet1/1/3
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface GigabitEthernet1/1/4
@@ -565,6 +777,8 @@ interface GigabitEthernet1/1/4
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/1
@@ -573,6 +787,8 @@ interface TenGigabitEthernet1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/2
@@ -581,6 +797,8 @@ interface TenGigabitEthernet1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/3
@@ -589,6 +807,8 @@ interface TenGigabitEthernet1/1/3
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/4
@@ -597,6 +817,8 @@ interface TenGigabitEthernet1/1/4
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/5
@@ -605,6 +827,8 @@ interface TenGigabitEthernet1/1/5
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/6
@@ -613,6 +837,8 @@ interface TenGigabitEthernet1/1/6
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/7
@@ -621,6 +847,8 @@ interface TenGigabitEthernet1/1/7
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TenGigabitEthernet1/1/8
@@ -629,6 +857,8 @@ interface TenGigabitEthernet1/1/8
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface FortyGigabitEthernet1/1/1
@@ -637,6 +867,8 @@ interface FortyGigabitEthernet1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface FortyGigabitEthernet1/1/2
@@ -645,6 +877,8 @@ interface FortyGigabitEthernet1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TwentyFiveGigE1/1/1
@@ -653,6 +887,8 @@ interface TwentyFiveGigE1/1/1
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface TwentyFiveGigE1/1/2
@@ -661,6 +897,8 @@ interface TwentyFiveGigE1/1/2
  ip flow monitor dnacmonitor output
  ipv6 flow monitor dnacmonitor_v6 input
  ipv6 flow monitor dnacmonitor_v6 output
+ service-policy input DNA-MARKING_IN
+ service-policy output DNA-dscp#APIC_QOS_Q_OUT
  ip nbar protocol-discovery
 !
 interface AppGigabitEthernet1/0/1
@@ -717,6 +955,18 @@ ip ssh source-interface Loopback0
 ip ssh version 2
 !
 !
+ip access-list extended DNA-MARKING_IN#OAM_CUSTOM__acl
+ 10 remark dns
+ 10 permit tcp any any eq domain
+ 20 permit tcp any any eq 5353
+ 30 permit udp any any eq domain
+ 40 permit udp any any eq 5353
+ip access-list extended DNA-MARKING_IN#TUNNELED-NBAR__acl
+ 10 remark capwap-data
+ 10 permit udp any any eq 5246
+ 20 permit udp any any eq 5247
+ 30 remark vxlan
+ 30 permit udp any any eq 4789
 !
 logging source-interface Loopback0
 logging host 198.18.129.100
