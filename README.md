@@ -26,3 +26,5 @@ Use set to set a default gateway:
 
 switch: set DEFAULT_GATEWAY 192.168.1.1
 
+
+boot tftp://192.168.1.10/cat9k_iosxe.16.12.04.SPA.bin
